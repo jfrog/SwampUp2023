@@ -1,0 +1,54 @@
+{
+  "name": "vuln-report-on-repositories",
+  "resources": {
+    "repositories": [
+      {
+        "name": "finapp-docker-dev-local"
+      },
+      {
+        "name": "finapp-docker-qa-local"
+      },
+      {
+        "name": "finapp-docker-prod-local"
+      },
+      {
+        "name": "payment-maven-dev-local"
+      },
+      {
+        "name": "payment-maven-qa-local"
+      },
+      {
+        "name": "payment-maven-prod-local"
+      },
+      {
+        "name": "auth-npm-dev-local"
+      },
+      {
+        "name": "auth-npm-qa-local"
+      },
+      {
+        "name": "auth-npm-prod-local"
+      }
+    ]
+  },
+  "filters": {
+    "artifact": "",
+    "component": "",
+    "has_remediation": null,
+    "cvss_score": null,
+    "cve": "",
+    "issue_id": "",
+    "severities": [
+      "Critical",
+      "High"
+    ],
+    "published": {
+      "start": null,
+      "end": null
+    },
+    "scan_date": {
+      "start": null,
+      "end": null
+    }
+  }
+}
