@@ -55,3 +55,16 @@ JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/plan.o
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform.lock.hcl
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/terraform.tfstate
+
+
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/artifactory-repo/terraform.tfstate
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/artifactory-repo/terraform.tfstate.backup
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/artifactory-repo/plan.out
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/artifactory-repo/.terraform.lock.hcl
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/artifactory-repo/.terraform
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/terraform.tfstate
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/terraform.tfstate.backup
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/plan.out
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/.terraform.lock.hcl
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/.terraform
+JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modules/terraform.tfstate

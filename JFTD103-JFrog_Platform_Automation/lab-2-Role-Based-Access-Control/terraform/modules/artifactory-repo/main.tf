@@ -162,3 +162,219 @@ resource "artifactory_virtual_docker_repository" "this" {
 #}
 
 
+# Create Groups
+# Reference: https://registry.terraform.io/providers/jfrog/artifactory/latest/docs/resources/group
+resource "artifactory_group" "readers" {
+  name  = "readers"
+  admin_privileges = false
+  auto_join = true
+}
+
+resource "artifactory_group" "security" {
+  name  = "security"
+  admin_privileges = false
+}
+
+resource "artifactory_group" "sre" {
+  name  = "sre"
+  admin_privileges = false
+}
+
+# Create Users
+# Reference: https://registry.terraform.io/providers/jfrog/artifactory/latest/docs/resources/user
+resource "artifactory_user" "user_james" {
+  name   = "Mike"
+  password = var.james_password
+  email  = "mike@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_peter" {
+  name   = "Bob"
+  password = var.peter_password
+  email  = "bob@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_filip" {
+  name   = "Jennifer"
+  password = var.peter_password
+  email  = "jennifer@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_dave" {
+  name   = "Rolando"
+  password = var.peter_password
+  email  = "rolando@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_mark" {
+  name   = "Irene"
+  password = var.peter_password
+  email  = "irene@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_matt" {
+  name   = "Matt"
+  password = var.peter_password
+  email  = "matt@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_support" {
+  name   = "support"
+  password = var.peter_password
+  email  = "support@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_user" "user_deleteme" {
+  name   = "deleteme"
+  password = var.peter_password
+  email  = "deleteme@cjjfrog.com"
+  groups   = ["readers"]
+  depends_on = [
+    artifactory_group.readers
+  ]
+}
+
+
+# Create a new Artifactory permission target called testpermission
+# Reference: https://registry.terraform.io/providers/jfrog/artifactory/latest/docs/resources/permission_target
+resource "artifactory_permission_target" "contractors-pt" {
+  name = "contractors-pt"
+
+  repo {
+    includes_pattern = ["**remote**"]
+    excludes_pattern = ["**prod**"]
+    repositories     = []
+
+    actions {
+      groups {
+        name        = "readers"
+        permissions = ["read"]
+      }
+    }
+  }
+
+  build {
+    includes_pattern = ["**"]
+    repositories     = ["artifactory-build-info"]
+
+    actions {
+      groups {
+        name        = "readers"
+        permissions = ["read"]
+      }
+    }
+  }
+  depends_on = [
+    artifactory_group.readers,
+  ]
+}
+
+resource "artifactory_permission_target" "sre-pt" {
+  name = "sre-pt"
+
+  repo {
+    includes_pattern = ["**"]
+    excludes_pattern = ["**"]
+    repositories     = []
+
+    actions {
+      groups {
+        name        = "sre"
+        permissions = ["read","write","annotate", "delete", "distribute"]
+      }
+    }
+  }
+
+  build {
+    includes_pattern = ["**"]
+    repositories     = ["artifactory-build-info"]
+
+    actions {
+      groups {
+        name        = "sre"
+        permissions = ["read","write","annotate", "delete", "distribute"]
+      }
+    }
+  }
+
+  depends_on = [
+    artifactory_group.sre,
+    artifactory_group.readers
+  ]
+}
+
+resource "artifactory_permission_target" "security-pt" {
+  name = "security-pt"
+
+  repo {
+    includes_pattern = ["**"]
+    excludes_pattern = ["**"]
+    repositories     = []
+
+    actions {
+      groups {
+        name        = "security"
+        permissions = ["read","managedXrayMeta"]
+      }
+    }
+  }
+
+  build {
+    includes_pattern = ["**"]
+    repositories     = ["artifactory-build-info"]
+
+    actions {
+      groups {
+        name        = "security"
+        permissions = ["read","managedXrayMeta"]
+      }
+    }
+  }
+
+  depends_on = [
+    artifactory_group.security,
+    artifactory_group.readers
+  ]
+}

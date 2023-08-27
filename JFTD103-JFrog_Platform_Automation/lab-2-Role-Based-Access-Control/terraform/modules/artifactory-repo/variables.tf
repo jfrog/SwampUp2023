@@ -151,3 +151,12 @@ variable "finapp-docker-dev-virtual" {
 #}
 
 
+variable "peter_password" {
+  type = string
+  default = "PypiPandas2!3"
+}
+
+variable "james_password" {
+  type = string
+  default = "PypiPyML@13"
+}
