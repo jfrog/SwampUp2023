@@ -54,3 +54,4 @@ JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/terraf
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/plan.out
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform.lock.hcl
 JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/terraform.tfstate
