@@ -1,7 +1,6 @@
 .DS_Store
 .idea
 
-
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/.jfrog
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/.jfrog_vscode
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/target
@@ -43,3 +42,15 @@ JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/mul
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/multi3/multi2.iml
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/multi3/target
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/multi3/bin
+JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/docker-example/.jfrog
+
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/artifactory-repo/terraform.tfstate
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/artifactory-repo/terraform.tfstate.backup
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/artifactory-repo/plan.out
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/artifactory-repo/.terraform.lock.hcl
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/modules/artifactory-repo/.terraform
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/terraform.tfstate
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/terraform.tfstate.backup
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/plan.out
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform.lock.hcl
+JFTD103-JFrog_Platform_Automation/lab-1-Repository-Provisioning/terraform/.terraform
