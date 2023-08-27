@@ -26,6 +26,7 @@
   - Reference document to [fork repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository).
 - `git clone` the forked repo on your workstation
   - Reference document to [clone repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository).
+- Preferred IDE (Integrated Development Environment) like [Intellij](https://www.jetbrains.com/idea/download/?section=mac#section=mac), [VSCode](https://code.visualstudio.com/download)
 - All content related today's training is under "**JFTD103-JFrog_Platform_Automation/**".
 
 <br/>
