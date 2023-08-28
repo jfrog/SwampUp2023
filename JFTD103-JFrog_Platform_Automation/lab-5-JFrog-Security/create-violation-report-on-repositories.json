@@ -1,0 +1,44 @@
+{
+  "name": "violation-report-on-repositories",
+  "resources": {
+    "repositories": [
+      {
+        "name": "auth-npm-dev-local",
+        "name": "payment-maven-dev-local",
+        "name": "finapp-docker-dev-local"
+      }
+    ]
+  },
+  "filters": {
+    "component": "",
+    "artifact": "",
+    "severities": ["Critical", "High"],
+    "scan_date": {
+      "start": null,
+      "end": null
+    },
+    "watch_names": ["prod-watch"],
+    "policy_names": ["prod-security-policy"],
+    "updated": {
+      "start": null,
+      "end": null
+    },
+    "security_filters": {
+      "summary_contains": "",
+      "cve": "",
+      "issue_id": "",
+      "cvss_score": null,
+      "has_remediation": null,
+      "published": {
+        "start": null,
+        "end": null
+      }
+    },
+    "license_filters": {
+      "license_names": ["MIT", "Apache-2.0"],
+      "unknown": null
+    },
+    "type": null,
+    "violation_status": "active"
+  }
+}

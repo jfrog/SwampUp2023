@@ -8,5 +8,5 @@
   {"key":"auth-npm-dev-local","packageType":"npm","rclass":"local","repoLayoutRef":"npm-default","environments":"DEV","xrayIndex":"true"},
   {"key":"auth-npm-qa-local","packageType":"npm","rclass":"local","repoLayoutRef":"npm-default","xrayIndex":"true"},
   {"key":"auth-npm-prod-local","packageType":"npm","rclass":"local","repoLayoutRef":"npm-default","environments":"PROD","xrayIndex":"true"},
-  {"key":"aws-tf-local","packageType":"terraformbackend","rclass":"local","repoLayoutRef":"simple-default","environments":"","xrayIndex":"true"}
+  {"key":"aws-tf-local","packageType":"TerraformBackend","rclass":"local","repoLayoutRef":"simple-default","environments":"DEV","xrayIndex":"true"}
 ]
