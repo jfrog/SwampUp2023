@@ -1,16 +1,11 @@
 variable "ACCESS_TOKEN" {
   type    = string
-  default = "eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJiS2I1bnd3M2h5YnRBSXBOaEY0NFRnUEExMW1EMjJ3TUx1aGtzR0RZMHJVIn0.eyJzdWIiOiJqZmFjQDAxaDd3cWhhcjcweXNzMHIyZHlyN2MxODltL3VzZXJzL2FkbWluIiwic2NwIjoiYXBwbGllZC1wZXJtaXNzaW9ucy9hZG1pbiIsImF1ZCI6IipAKiIsImlzcyI6ImpmZmVAMDFoN3dxaGFyNzB5c3MwcjJkeXI3YzE4OW0iLCJpYXQiOjE2OTMxNTQ2MDEsImp0aSI6IjZkZDIyMWQ4LWQ3Y2MtNGE1My04MDViLTRkMmI2YTk2OTI5YiJ9.cv7MLI5LjQl0Migh0K3Q8gAUP2aSzgEOq3-q4qlShW2YhlrlQU-q_0rXfjD7v_6IPqNTFQAjJx9DUVR4Cv9Wg7jgBhVUQn8GobZsMhQYYOjfph9OXbBi3BHt20d5wfwIyW0_J-WIQsHPB0BtYliCPYwek40JkocHNiXIP_2tS-m9WGF67gRHqBfgqLWMBHk-_CX5rjFfq_vml0ZfIJ2w8m8IJmmw8PyKMBPlOrylRSc3hTMj4ZOijLdlBfiJN5RtOwZ2Nip9bdGPGsO6W5JwP2xxLS7JEoAhRPTsSy2x7KFZ5i18sHFlU56Gtl1hd9NsNgYAraH3_ag5CpBnST6XYg"
+  default = ""
 }
 
 variable "JFROG_URL" {
   type    = string
-  default = "https://swamp23103.jfrog.io/"
-}
-
-variable "JFROG_URL2" {
-  type    = string
-  default = "https://swamp23103.jfrog.io/"
+  default = "https://lunchnlearn.jfrog.io/"
 }
 
 variable "TRUE" {
@@ -126,29 +121,29 @@ variable "finapp-docker-dev-virtual" {
   default = null
 }
 
-#variable "auth-npm-dev-virtual" {
-#  type = object({
-#    key                    = string
-#    project_key            = optional(string, null)
-#    description            = optional(string, null)
-#    repo_layout_ref        = optional(string, "npm-default")
-#    repositories           = list(string)
-#    default_deployment_repo = optional(string, null)
-#  })
-#  default = null
-#}
+variable "auth-npm-dev-virtual" {
+  type = object({
+    key                    = string
+    project_key            = optional(string, null)
+    description            = optional(string, null)
+    repo_layout_ref        = optional(string, "npm-default")
+    repositories           = list(string)
+    default_deployment_repo = optional(string, null)
+  })
+  default = null
+}
 
-#variable "payment-maven-dev-virtual" {
-#  type = object({
-#    key                    = string
-#    project_key            = optional(string, null)
-#    description            = optional(string, null)
-#    repo_layout_ref        = optional(string, "maven-2-default")
-#    repositories           = list(string)
-#    default_deployment_repo = optional(string, null)
-#  })
-#  default = null
-#}
+variable "payment-maven-dev-virtual" {
+  type = object({
+    key                    = string
+    project_key            = optional(string, null)
+    description            = optional(string, null)
+    repo_layout_ref        = optional(string, "maven-2-default")
+    repositories           = list(string)
+    default_deployment_repo = optional(string, null)
+  })
+  default = null
+}
 
 
 variable "peter_password" {

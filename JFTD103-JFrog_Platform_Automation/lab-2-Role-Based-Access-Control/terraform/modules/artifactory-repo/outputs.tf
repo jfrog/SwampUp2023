@@ -26,10 +26,10 @@ output "finapp-docker-dev-virtual" {
   value = try(artifactory_virtual_docker_repository.this[0].key, "")
 }
 
-#output "auth-npm-dev-virtual" {
-#  value = try(artifactory_virtual_npm_repository.this[0].key , "")
-#}
+output "auth-npm-dev-virtual" {
+  value = try(artifactory_virtual_npm_repository.this[0].key , "")
+}
 
-#output "payment-maven-dev-virtual" {
-#  value = try(artifactory_virtual_maven_repository.this[0].key, "")
-#}
+output "payment-maven-dev-virtual" {
+  value = try(artifactory_virtual_maven_repository.this[0].key, "")
+}

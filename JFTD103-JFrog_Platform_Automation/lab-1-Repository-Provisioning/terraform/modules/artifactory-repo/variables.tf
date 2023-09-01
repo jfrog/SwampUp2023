@@ -5,13 +5,9 @@ variable "ACCESS_TOKEN" {
 
 variable "JFROG_URL" {
   type    = string
-  default = "https://swamp23103.jfrog.io/"
+  default = "https://lunchnlearn.jfrog.io/"
 }
 
-variable "JFROG_URL2" {
-  type    = string
-  default = "https://swamp23103.jfrog.io/"
-}
 
 variable "TRUE" {
   type    = bool
