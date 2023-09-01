@@ -46,19 +46,19 @@ module "virtual" {
     ]
     default_deployment_repo = "finapp-docker-dev-local"
   }
-#  auth-npm-dev-virtual = {
-#    key          = "auth-npm-dev-virtual"
-#    repositories = [ "auth-npm-dev-local", "npm-remote"]
-#    default_deployment_repo = "auth-npm-dev-local"
-#  }
+  auth-npm-dev-virtual = {
+    key          = "auth-npm-dev-virtual"
+    repositories = [ "auth-npm-dev-local", "npm-remote"]
+    default_deployment_repo = "auth-npm-dev-local"
+  }
 
-#  payment-maven-dev-virtual = {
-#    key          = "payment-maven-dev-virtual"
-#    repositories = [
-#      module.local.payment-maven-dev-local,
-#      module.remote.remote_maven
-#    ]
-#    default_deployment_repo = "payment-maven-dev-local"
-#  }
+  payment-maven-dev-virtual = {
+    key          = "payment-maven-dev-virtual"
+    repositories = [
+      module.local.payment-maven-dev-local,
+      module.remote.remote_maven
+    ]
+    default_deployment_repo = "payment-maven-dev-local"
+  }
 
 }
