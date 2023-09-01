@@ -1,0 +1,10 @@
+version: 1
+type: maven
+resolver:
+    serverId: swampup2023
+    snapshotRepo: jftd104-libs-snapshot-virtual
+    releaseRepo: jftd104-libs-release-virtual
+deployer:
+    serverId: swampup2023
+    snapshotRepo: jftd104-libs-snapshot-virtual
+    releaseRepo: jftd104-libs-release-virtual

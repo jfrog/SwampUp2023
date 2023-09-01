@@ -1,0 +1,6 @@
+[
+  {"key":"jftd104-docker-virtual","packageType":"docker","rclass":"virtual","repoLayoutRef":"simple-default","defaultDeploymentRepo":"jftd104-docker-local","externalDependenciesRemoteRepo":"jftd104-docker-remote","repositories":"jftd104-docker-local,jftd104-docker-remote"},
+  {"key":"jftd104-libs-release-virtual","packageType":"maven","rclass":"virtual","repoLayoutRef":"maven-2-default","defaultDeploymentRepo":"jftd104-libs-release-local","externalDependenciesRemoteRepo":"jftd104-maven-remote","repositories":"jftd104-libs-release-local,jftd104-maven-remote"},
+  {"key":"jftd104-libs-snapshot-virtual","packageType":"maven","rclass":"virtual","repoLayoutRef":"maven-2-default","defaultDeploymentRepo":"jftd104-libs-snapshot-local","externalDependenciesRemoteRepo":"jftd104-maven-remote","repositories":"jftd104-libs-snapshot-local,jftd104-maven-remote"},
+  {"key":"jftd104-npm-virtual","packageType":"npm","rclass":"virtual","repoLayoutRef":"npm-default","defaultDeploymentRepo":"jftd104-npm-local","externalDependenciesRemoteRepo":"jftd104-npm-remote","repositories":"jftd104-npm-local,jftd104-npm-remote"}
+]

@@ -1,0 +1,13 @@
+[
+  {"key":"jftd104-docker-local"},
+  {"key":"jftd104-libs-release-local"},
+  {"key":"jftd104-libs-snapshot-local"},
+  {"key":"jftd104-npm-local"},
+  {"key":"jftd104-docker-remote"},
+  {"key":"jftd104-maven-remote"},
+  {"key":"jftd104-npm-remote"},
+  {"key":"jftd104-docker-virtual"},
+  {"key":"jftd104-libs-release-virtual"},
+  {"key":"jftd104-libs-snapshot-virtual"},
+  {"key":"jftd104-npm-virtual"}
+]

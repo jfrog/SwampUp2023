@@ -1,0 +1,35 @@
+{
+    "indexed_repos": [
+      {
+        "name":"jftd104-docker-local",
+        "type":"local",
+        "pkg_type":"docker"
+      },
+      {
+        "name":"jftd104-libs-release-local",
+        "type":"local",
+        "pkg_type":"Maven"
+      },{
+        "name":"jftd104-libs-snapshot-local",
+        "type":"local",
+        "pkg_type":"Maven"
+      },{
+        "name":"jftd104-npm-local",
+        "type":"local",
+        "pkg_type":"npm"
+      },{
+        "name":"jftd104-docker-remote",
+        "type":"remote",
+        "pkg_type":"docker"
+      },{
+        "name":"jftd104-maven-remote",
+        "type":"remote",
+        "pkg_type":"Maven"
+      },{
+        "name":"jftd104-npm-remote",
+        "type":"remote",
+        "pkg_type":"npm"
+      }
+    ],
+    "non_indexed_repos": []
+}
