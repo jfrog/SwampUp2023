@@ -126,29 +126,29 @@ variable "finapp-docker-dev-virtual" {
   default = null
 }
 
-#variable "auth-npm-dev-virtual" {
-#  type = object({
-#    key                    = string
-#    project_key            = optional(string, null)
-#    description            = optional(string, null)
-#    repo_layout_ref        = optional(string, "npm-default")
-#    repositories           = list(string)
-#    default_deployment_repo = optional(string, null)
-#  })
-#  default = null
-#}
+variable "auth-npm-dev-virtual" {
+  type = object({
+    key                    = string
+    project_key            = optional(string, null)
+    description            = optional(string, null)
+    repo_layout_ref        = optional(string, "npm-default")
+    repositories           = list(string)
+    default_deployment_repo = optional(string, null)
+  })
+  default = null
+}
 
-#variable "payment-maven-dev-virtual" {
-#  type = object({
-#    key                    = string
-#    project_key            = optional(string, null)
-#    description            = optional(string, null)
-#    repo_layout_ref        = optional(string, "maven-2-default")
-#    repositories           = list(string)
-#    default_deployment_repo = optional(string, null)
-#  })
-#  default = null
-#}
+variable "payment-maven-dev-virtual" {
+  type = object({
+    key                    = string
+    project_key            = optional(string, null)
+    description            = optional(string, null)
+    repo_layout_ref        = optional(string, "maven-2-default")
+    repositories           = list(string)
+    default_deployment_repo = optional(string, null)
+  })
+  default = null
+}
 
 
 variable "peter_password" {
