@@ -72,3 +72,4 @@ JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modu
 
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform.lock.hcl
+JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/terraform.tfstate
