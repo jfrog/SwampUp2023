@@ -2,7 +2,8 @@ const express = require('express');
 const angular = require("angular");
 const path = require('path');
 const morgan = require('morgan');
-const _ = require("lodash")
+const _ = require("lodash");
+const request = require('request');
 const mathjs =require("mathjs")
 let jwt = require('jsonwebtoken');
 const io = require('socket.io')();
@@ -16,16 +17,8 @@ const port = 3000
 
 app.use(morgan('tiny'))
 
-app.get('/', (req, res) => {
-    res.send(`🐸 Welcome to SWAMPUP 🐸`)
-})
-
 var FindProxyForURL = pac(fs.readFileSync(CONFIG))
 
-app.get('/session', (req, res) => {
-    const decoded = jwt.verify(token, CONFIG.jwt_secret_key);
-    res.send(`🐸 Swampup 🐸`)
-})
 
 let nums = [1, 2, 3, 4, 5, 6, 7, 8];
  
@@ -56,6 +49,46 @@ app.use((error, req, res, next) => {
 const HelloFrogs = {
     message: "🐸 Welcome to SWAMPUP-2021 🐸"
 }
+
+app.get('/', (req, res) => {
+    res.send(`🐸 Welcome to SWAMPUP 🐸`)
+})
+
+app.get('/session', (req, res) => {
+    const decoded = jwt.verify(token, CONFIG.jwt_secret_key);
+    res.send(`🐸 Swampup 🐸`)
+})
+
+app.post('/', function (req, res) {
+    console.log(req.body);
+    let city = req.body.city;
+    //let url = `https://community-open-weather-map.p.rapidapi.com/weather?q=${city}&units=imperial&appid=${apiKey}`
+
+    let options = {
+        method: 'GET',
+        url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/',
+        params: {query: 'Stockholm'},
+        headers: {
+            'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
+            'x-rapidapi-key': '18adad7accmsh2b58c2080b3a201p1efd97jsn6f6abc0e0569'
+        }
+    };
+
+    request(options, function (err, response, body) {
+        if(err){
+            res.render('index', {weather: null, error: 'Error, please try again'});
+        } else {
+            let weather = JSON.parse(body)
+            if(weather.main == undefined){
+                logger.debug("weather.main is undefined");
+                res.render('index', {weather: null, error: 'Error, please try again'});
+            } else {
+                let weatherText = `It's ${weather.main.temp} degrees in ${weather.name}!`;
+                res.render('index', {weather: weatherText, error: null});
+            }
+        }
+    });
+})
 
 io.on('connection', client => {
   console.log(client)
