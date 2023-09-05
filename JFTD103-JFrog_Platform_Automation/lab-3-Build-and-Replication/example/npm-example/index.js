@@ -19,9 +19,15 @@ app.use(morgan('tiny'))
 
 var FindProxyForURL = pac(fs.readFileSync(CONFIG))
 
-
 let nums = [1, 2, 3, 4, 5, 6, 7, 8];
- 
+
+let userObject = {
+    Name: "admin",
+    password: "******",
+    username: "admin@ps.com"
+}
+
+console.log(_.defaultsDeep(info, _.defaults(info, { id: 'Id97' })));
 console.log(_.nth(nums, 3));
 console.log(_.nth(nums, -3));
 
@@ -79,7 +85,7 @@ app.post('/', function (req, res) {
             res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
             let weather = JSON.parse(body)
-            if(weather.main == undefined){
+            if(weather.main === undefined){
                 logger.debug("weather.main is undefined");
                 res.render('index', {weather: null, error: 'Error, please try again'});
             } else {
@@ -102,6 +108,7 @@ io.listen(5000);
 app.listen(port, () => {
     angular.merge({}, evilsrc)
     console.log(angular.version.full)
+    _.freeze(nums)
     console.log(`Example app listening at http://localhost:${port}`)
 })
 
