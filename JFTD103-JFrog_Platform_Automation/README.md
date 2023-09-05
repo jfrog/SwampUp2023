@@ -4,14 +4,12 @@
 - Lab 0 - Configure JFrog CLI
 - LAB 1 - Repository Provisioning
 - LAB 2 - Role-Based Access Control
-- LAB 3 - Build Integration and Properties
-    - `jf ci-setup` auto generate `yml` or `jenkins` file with CLI Steps
-- LAB 4 - Configure Replication
-- LAB 5 - Artifactory Query Language
+- LAB 3 - Build Integration, Properties and Replication
+- LAB 4 - Artifactory Query Language
     - Search, Upload, Download, Cleanup, etc
-- LAB 6 - Xray
-- LAB 7 - Distribution
-- LAB 8 - JFROG CLI Plugin
+- LAB 5 - JFrog Security 
+- LAB 6 - Distribution
+- LAB 7 - Plugins and Webhooks
 
 
 <br/>
