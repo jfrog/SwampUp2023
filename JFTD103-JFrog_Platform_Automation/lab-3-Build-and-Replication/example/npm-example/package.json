@@ -4,7 +4,10 @@
   "description": "Node.js sample project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "npm build",
+    "clean": "rm -rf node_modules",
+    "rebuild": "npm run clean && npm install && npm run build"
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -14,9 +17,9 @@
     "path": "^0.12.7",
     "degenerator": "2.2.0",
     "jsonwebtoken": "^8.5.1",
-    "sequelize": "^6.19.0",
     "socket.io": "2.1.0",
     "cors": "^2.8.5",
-    "angular":"1.3.13"
+    "angular":"1.3.13",
+    "merge-descriptors": "1.0.1"
   }
 }
