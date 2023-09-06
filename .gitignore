@@ -73,3 +73,6 @@ JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modu
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform.lock.hcl
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/terraform.tfstate
+
+JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/npm-example/.npmrc
+JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/npm-example/jfrog.npmrc.backup
