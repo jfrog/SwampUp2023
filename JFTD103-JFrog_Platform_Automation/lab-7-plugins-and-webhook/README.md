@@ -51,7 +51,20 @@ This plugin recursively scans the root_folder for .jar and .war files; For every
 
 There are two types of [Webhooks](https://jfrog.com/help/r/jfrog-platform-administration-documentation/webhooks) (`Platform configuration > Platform Management > Webhooks`):
 - **[Predefined](https://jfrog.com/help/r/jfrog-platform-administration-documentation/predefined-webhooks)**: These are Webhooks with predefined payloads, which cannot be customized for specific vendors. Users, however, can customize the target URL and add HTTP headers.
+  - In UI, Platform Configuration -> New Webhook -> Predefined (Default) -> URL & Events -> Create
+    - NOTE: we can use [webhook](https://webhook.site/) to review the payload
 - **[Custom](https://jfrog.com/help/r/jfrog-platform-administration-documentation/custom-webhooks)**: These are Webhooks whose HTTP request headers and payload can be fully customized to adapt to any target service, such as GitHub actions, Gitlab pipelines, Jenkins jobs, Slack, and more. Custom Webhooks trigger events with the format expected by the vendor.
+  - In UI, Platform Configuration -> New Webhook -> Custom -> URL & Events -> Create 
+    - NOTE: we can use [webhook](https://webhook.site/) to review the payload
+
+<br />
+<br />
+
+## JFrog Worker [BETA]
+
+- JFrog [Workers](https://jfrog.com/help/r/jfrog-platform-administration-documentation/workers) (Typescript Code) is a service in the JFrog Platform that provides a serverless execution environment. You can create workers that react to events in the JFrog Platform similar to AWS Lambda services.
+- Workers service provides more flexibility to accomplish your use cases.
+  - like Before Download, After Download, Before Upload, After Create, After Move, After Build Info Save
 
 <br />
 <br />
