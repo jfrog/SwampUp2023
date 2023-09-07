@@ -27,6 +27,7 @@ JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/.jf
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/target
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/npm-example/.jfrog
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/npm-example/node_modules
+JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/npm-example/.npmrc
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/npm-example/package-lock.json
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/multi1/.jfrog_vscode
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/maven-example/multi1/.settings
@@ -73,6 +74,9 @@ JFTD103-JFrog_Platform_Automation/lab-2-Role-Based-Access-Control/terraform/modu
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/.terraform.lock.hcl
 JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/terraform.tfstate
+JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/plan.out
+JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/terraform/terraform.tfstate.backup
+
 
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/npm-example/.npmrc
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/npm-example/jfrog.npmrc.backup

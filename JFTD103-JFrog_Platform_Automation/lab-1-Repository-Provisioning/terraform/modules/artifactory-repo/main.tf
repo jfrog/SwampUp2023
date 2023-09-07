@@ -133,32 +133,32 @@ resource "artifactory_virtual_docker_repository" "this" {
   #  }
 }
 
-#resource "auth-npm-dev-virtual" "this" {
-#  count                   = var.auth-npm-dev-virtual != null ? 1 : 0
-#  key                     = var.auth-npm-dev-virtual.key
-#  project_key             = var.auth-npm-dev-virtual.project_key
-#  description             = var.auth-npm-dev-virtual.description
-#  repo_layout_ref         = var.auth-npm-dev-virtual.repo_layout_ref
-#  repositories            = var.auth-npm-dev-virtual.repositories
-#  default_deployment_repo = var.auth-npm-dev-virtual.default_deployment_repo
-#  project_environments    = ["DEV"]
-#  #  lifecycle {
-#  #    ignore_changes = [project_environments]
-#  #  }
-#}
+resource "artifactory_virtual_npm_repository" "this" {
+  count                   = var.auth-npm-dev-virtual != null ? 1 : 0
+  key                     = var.auth-npm-dev-virtual.key
+  project_key             = var.auth-npm-dev-virtual.project_key
+  description             = var.auth-npm-dev-virtual.description
+  repo_layout_ref         = var.auth-npm-dev-virtual.repo_layout_ref
+  repositories            = var.auth-npm-dev-virtual.repositories
+  default_deployment_repo = var.auth-npm-dev-virtual.default_deployment_repo
+  project_environments    = ["DEV"]
+  #  lifecycle {
+  #    ignore_changes = [project_environments]
+  #  }
+}
 
-#resource "payment-maven-dev-virtual" "this" {
-#  count                   = var.payment-maven-dev-virtual != null ? 1 : 0
-#  key                     = var.payment-maven-dev-virtual.key
-#  project_key             = var.payment-maven-dev-virtual.project_key
-#  description             = var.payment-maven-dev-virtual.description
-#  repo_layout_ref         = var.payment-maven-dev-virtual.repo_layout_ref
-#  repositories            = var.payment-maven-dev-virtual.repositories
-#  default_deployment_repo = var.payment-maven-dev-virtual.default_deployment_repo
-#  project_environments    = ["DEV"]
-#  #  lifecycle {
-#  #    ignore_changes = [project_environments]
-#  #  }
-#}
+resource "artifactory_virtual_maven_repository" "this" {
+  count                   = var.payment-maven-dev-virtual != null ? 1 : 0
+  key                     = var.payment-maven-dev-virtual.key
+  project_key             = var.payment-maven-dev-virtual.project_key
+  description             = var.payment-maven-dev-virtual.description
+  repo_layout_ref         = var.payment-maven-dev-virtual.repo_layout_ref
+  repositories            = var.payment-maven-dev-virtual.repositories
+  default_deployment_repo = var.payment-maven-dev-virtual.default_deployment_repo
+  project_environments    = ["DEV"]
+  #  lifecycle {
+  #    ignore_changes = [project_environments]
+  #  }
+}
 
 

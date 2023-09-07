@@ -1,0 +1,3325 @@
+{
+	"info": {
+		"_postman_id": "51389ed2-08dc-4513-8a2d-3bfa93144f88",
+		"name": "Terraform Provider",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13894644"
+	},
+	"item": [
+		{
+			"name": "Artifactory",
+			"item": [
+				{
+					"name": "Security",
+					"item": [
+						{
+							"name": "artifactory/api/security/users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/users",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/users/{{userName}}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/users/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"users",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/users/{{userName}}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@tempurl.org\",\n    \"password\": \"Passw0rd!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/users/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"users",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/users/{{userName}}",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@tempurl.org\",\n    \"password\": \"Passw0rd!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/users/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"users",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/users/{{userName}}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/users/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"users",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/groups",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/groups",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"groups"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/groups/{{groupName}}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/groups/Test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"groups",
+										"Test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/token/{id}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "alex_test",
+											"type": "default"
+										},
+										{
+											"key": "scope",
+											"value": "jfrt@01e3symwq999mx00epqaw31qnm:admin",
+											"type": "default"
+										},
+										{
+											"key": "refreshable",
+											"value": "true",
+											"type": "default"
+										},
+										{
+											"key": "audience",
+											"value": "jfrt@* jfxr*",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/tokens/6094ca29-7390-4ed0-aaf1-c878f720bdad",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"tokens",
+										"6094ca29-7390-4ed0-aaf1-c878f720bdad"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/keypair",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pairName\": \"test-gpg-key\",\n    \"pairType\": \"GPG\",\n    \"alias\": \"test-gpg\",\n    \"privateKey\": \"-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\n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\nzoQkekoL4H4GU8QB6GY=\n=JQxa\n-----END PGP PRIVATE KEY BLOCK-----\",\n    \"publicKey\": \"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\nxo0EYGrVNAEEAPD3YDt0qP8kSV8bnmqVP5XDPoN40gEpUGtDLjAn6d+cRMeNGaru\n6H0bdgwQpND8Gz9Qx2pCNSxlWDZpY1fCvRQ174iGjvO/3527f148cgKNZtwLsKrZ\nlaW8z3tB2LuCM2e97ijX+lzRf7YJUXU3pOfoCFWpOPoRg1CHV0NyHl0VABEBAAHN\nFmFsYW4gPGFsYW5uQGpmcm9nLmNvbT7CrQQTAQoAFwUCYGrVNAIbLwMLCQcDFQoI\nAh4BAheAAAoJENzR2QJlA6glZmsD/iqhnNFy1Elj3hGL0HaEzeb+KDpcSL/L5a/8\nWIGCQFeLcEn9lC+68b/eERKGIoXJ7z8HfPDFNRTKvomKIdAqFiAeDAUUD0B82rsx\nxDf8USnTwJlnd0bPe9nxgXYcrwioEYbPVYGl3jima/KQrbW8XlKyiypy4Nd66Wcn\nTuM6PwRFzo0EYGrVNAEEANVNINyfCQ+y1haaaAJ0uCgx3dW52LwcZfvOP6i798WZ\ndyGA+WSUCEcrklUwZ595E2dNkNKptksftwSeQ0+EH5S1ZlEaq2YUv8fCx32F1ckh\nD3eHaCKRxTPx/zbb96q4ruEGKhOBXceid3o341HbtGVKi8VjBx3XNukskQ+EOvgt\nABEBAAHCwIMEGAEKAA8FAmBq1TQFCQ8JnAACGy4AqAkQ3NHZAmUDqCWdIAQZAQoA\nBgUCYGrVNAAKCRBddQ63FhKl6NmDBACqxC4lAnsCQERjs02LYAEAwVDhDf0rXxD0\nH+hKDyxQZc80M7WIpXaBHmbs8ekJRnY7JHcer7sizDMdfkR3xB62jNGhc0XiW6nc\nmlwvtWt3+E6AkObmWnocRy5ztTQI0gye0B3cPs2txE2fCs+WD7yLRnM3HqIAh83W\nCccvh0+uG96dBADlPbZ8g8q6bkeeT72gOi3OCN0A+Y8lUPifhrpSiI9xMpP3aomM\nbeZJB6fWjEzNoblQ9jUr/E54bF9jMr6L3uE4OJH9SYJ/HvqcKJC+1TFeQ9lXR7g7\nMTdfxEvhMDhcsd/pYIgrzvDry+B2+jANW10R1yejT/C8QdlWIndDsEsaKs6NBGBq\n1TQBBADJD6gVGTMGb/WsfnSaL5yA3AEMczhPqxD4FDC0vzqGG3XzKgxtmW8cJXls\nNCK80F61daxJ72/UAmfxHbNP1qmHSiosEe+h1YZ/Zo3pN/LODzg9JrOs9A2xwjqE\nnU9mS0jDz5oEQtr9K4+YKOdJvmuaN85ueBizfQ1TYRNuDtmbnQARAQABwsCDBBgB\nCgAPBQJgatU0BQkPCZwAAhsuAKgJENzR2QJlA6glnSAEGQEKAAYFAmBq1TQACgkQ\nehctgYvYtmh38gP6A9lnQaLuVnTElJLy2XSDTqwWOcy/5J842S/xdQEsWUMXh4I5\nmlotkZwkrdvXp8E/F3P8X7GbxhNAVZX+Xcm95V3g/kmP+Pq7PeUmoZR5LD8ppBfO\n7v6XgaUhraUPAZl6lx4L5pYNCX9JBNUtQAG9xIoap4slvksdz5SN/BwSgV6qqwQA\ntr4YTDXvLyoWwMFB2FjWcw4zwV+7yHwGzogKfGCQy5qVlDoQyWdkwwF1awyk5RIe\nZxwPZ2SDaiznOmZ+4LjR2NPmjnT96d9RKRtgEjkfW+a19BofrvEalS9wh/jkboea\nd8rDu8wMbLAl77dq1c6dpJDgzoQkekoL4H4GU8QB6GY=\n=fot9\n-----END PGP PUBLIC KEY BLOCK-----\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/keypair",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"keypair"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/keypair/{{keyPairName}}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pairName\": \"test-gpg-key\",\n    \"pairType\": \"GPG\",\n    \"alias\": \"test-gpg\",\n    \"privateKey\": \"-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\n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\nzoQkekoL4H4GU8QB6GY=\n=JQxa\n-----END PGP PRIVATE KEY BLOCK-----\",\n    \"publicKey\": \"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\nxo0EYGrVNAEEAPD3YDt0qP8kSV8bnmqVP5XDPoN40gEpUGtDLjAn6d+cRMeNGaru\n6H0bdgwQpND8Gz9Qx2pCNSxlWDZpY1fCvRQ174iGjvO/3527f148cgKNZtwLsKrZ\nlaW8z3tB2LuCM2e97ijX+lzRf7YJUXU3pOfoCFWpOPoRg1CHV0NyHl0VABEBAAHN\nFmFsYW4gPGFsYW5uQGpmcm9nLmNvbT7CrQQTAQoAFwUCYGrVNAIbLwMLCQcDFQoI\nAh4BAheAAAoJENzR2QJlA6glZmsD/iqhnNFy1Elj3hGL0HaEzeb+KDpcSL/L5a/8\nWIGCQFeLcEn9lC+68b/eERKGIoXJ7z8HfPDFNRTKvomKIdAqFiAeDAUUD0B82rsx\nxDf8USnTwJlnd0bPe9nxgXYcrwioEYbPVYGl3jima/KQrbW8XlKyiypy4Nd66Wcn\nTuM6PwRFzo0EYGrVNAEEANVNINyfCQ+y1haaaAJ0uCgx3dW52LwcZfvOP6i798WZ\ndyGA+WSUCEcrklUwZ595E2dNkNKptksftwSeQ0+EH5S1ZlEaq2YUv8fCx32F1ckh\nD3eHaCKRxTPx/zbb96q4ruEGKhOBXceid3o341HbtGVKi8VjBx3XNukskQ+EOvgt\nABEBAAHCwIMEGAEKAA8FAmBq1TQFCQ8JnAACGy4AqAkQ3NHZAmUDqCWdIAQZAQoA\nBgUCYGrVNAAKCRBddQ63FhKl6NmDBACqxC4lAnsCQERjs02LYAEAwVDhDf0rXxD0\nH+hKDyxQZc80M7WIpXaBHmbs8ekJRnY7JHcer7sizDMdfkR3xB62jNGhc0XiW6nc\nmlwvtWt3+E6AkObmWnocRy5ztTQI0gye0B3cPs2txE2fCs+WD7yLRnM3HqIAh83W\nCccvh0+uG96dBADlPbZ8g8q6bkeeT72gOi3OCN0A+Y8lUPifhrpSiI9xMpP3aomM\nbeZJB6fWjEzNoblQ9jUr/E54bF9jMr6L3uE4OJH9SYJ/HvqcKJC+1TFeQ9lXR7g7\nMTdfxEvhMDhcsd/pYIgrzvDry+B2+jANW10R1yejT/C8QdlWIndDsEsaKs6NBGBq\n1TQBBADJD6gVGTMGb/WsfnSaL5yA3AEMczhPqxD4FDC0vzqGG3XzKgxtmW8cJXls\nNCK80F61daxJ72/UAmfxHbNP1qmHSiosEe+h1YZ/Zo3pN/LODzg9JrOs9A2xwjqE\nnU9mS0jDz5oEQtr9K4+YKOdJvmuaN85ueBizfQ1TYRNuDtmbnQARAQABwsCDBBgB\nCgAPBQJgatU0BQkPCZwAAhsuAKgJENzR2QJlA6glnSAEGQEKAAYFAmBq1TQACgkQ\nehctgYvYtmh38gP6A9lnQaLuVnTElJLy2XSDTqwWOcy/5J842S/xdQEsWUMXh4I5\nmlotkZwkrdvXp8E/F3P8X7GbxhNAVZX+Xcm95V3g/kmP+Pq7PeUmoZR5LD8ppBfO\n7v6XgaUhraUPAZl6lx4L5pYNCX9JBNUtQAG9xIoap4slvksdz5SN/BwSgV6qqwQA\ntr4YTDXvLyoWwMFB2FjWcw4zwV+7yHwGzogKfGCQy5qVlDoQyWdkwwF1awyk5RIe\nZxwPZ2SDaiznOmZ+4LjR2NPmjnT96d9RKRtgEjkfW+a19BofrvEalS9wh/jkboea\nd8rDu8wMbLAl77dq1c6dpJDgzoQkekoL4H4GU8QB6GY=\n=fot9\n-----END PGP PUBLIC KEY BLOCK-----\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/keypair/test-gpg-key",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"keypair",
+										"test-gpg-key"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/keys/trusted",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"alias\": \"test-trusted-key\",\n    \"public_key\": \"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\nxo0EYGrVNAEEAPD3YDt0qP8kSV8bnmqVP5XDPoN40gEpUGtDLjAn6d+cRMeNGaru\n6H0bdgwQpND8Gz9Qx2pCNSxlWDZpY1fCvRQ174iGjvO/3527f148cgKNZtwLsKrZ\nlaW8z3tB2LuCM2e97ijX+lzRf7YJUXU3pOfoCFWpOPoRg1CHV0NyHl0VABEBAAHN\nFmFsYW4gPGFsYW5uQGpmcm9nLmNvbT7CrQQTAQoAFwUCYGrVNAIbLwMLCQcDFQoI\nAh4BAheAAAoJENzR2QJlA6glZmsD/iqhnNFy1Elj3hGL0HaEzeb+KDpcSL/L5a/8\nWIGCQFeLcEn9lC+68b/eERKGIoXJ7z8HfPDFNRTKvomKIdAqFiAeDAUUD0B82rsx\nxDf8USnTwJlnd0bPe9nxgXYcrwioEYbPVYGl3jima/KQrbW8XlKyiypy4Nd66Wcn\nTuM6PwRFzo0EYGrVNAEEANVNINyfCQ+y1haaaAJ0uCgx3dW52LwcZfvOP6i798WZ\ndyGA+WSUCEcrklUwZ595E2dNkNKptksftwSeQ0+EH5S1ZlEaq2YUv8fCx32F1ckh\nD3eHaCKRxTPx/zbb96q4ruEGKhOBXceid3o341HbtGVKi8VjBx3XNukskQ+EOvgt\nABEBAAHCwIMEGAEKAA8FAmBq1TQFCQ8JnAACGy4AqAkQ3NHZAmUDqCWdIAQZAQoA\nBgUCYGrVNAAKCRBddQ63FhKl6NmDBACqxC4lAnsCQERjs02LYAEAwVDhDf0rXxD0\nH+hKDyxQZc80M7WIpXaBHmbs8ekJRnY7JHcer7sizDMdfkR3xB62jNGhc0XiW6nc\nmlwvtWt3+E6AkObmWnocRy5ztTQI0gye0B3cPs2txE2fCs+WD7yLRnM3HqIAh83W\nCccvh0+uG96dBADlPbZ8g8q6bkeeT72gOi3OCN0A+Y8lUPifhrpSiI9xMpP3aomM\nbeZJB6fWjEzNoblQ9jUr/E54bF9jMr6L3uE4OJH9SYJ/HvqcKJC+1TFeQ9lXR7g7\nMTdfxEvhMDhcsd/pYIgrzvDry+B2+jANW10R1yejT/C8QdlWIndDsEsaKs6NBGBq\n1TQBBADJD6gVGTMGb/WsfnSaL5yA3AEMczhPqxD4FDC0vzqGG3XzKgxtmW8cJXls\nNCK80F61daxJ72/UAmfxHbNP1qmHSiosEe+h1YZ/Zo3pN/LODzg9JrOs9A2xwjqE\nnU9mS0jDz5oEQtr9K4+YKOdJvmuaN85ueBizfQ1TYRNuDtmbnQARAQABwsCDBBgB\nCgAPBQJgatU0BQkPCZwAAhsuAKgJENzR2QJlA6glnSAEGQEKAAYFAmBq1TQACgkQ\nehctgYvYtmh38gP6A9lnQaLuVnTElJLy2XSDTqwWOcy/5J842S/xdQEsWUMXh4I5\nmlotkZwkrdvXp8E/F3P8X7GbxhNAVZX+Xcm95V3g/kmP+Pq7PeUmoZR5LD8ppBfO\n7v6XgaUhraUPAZl6lx4L5pYNCX9JBNUtQAG9xIoap4slvksdz5SN/BwSgV6qqwQA\ntr4YTDXvLyoWwMFB2FjWcw4zwV+7yHwGzogKfGCQy5qVlDoQyWdkwwF1awyk5RIe\nZxwPZ2SDaiznOmZ+4LjR2NPmjnT96d9RKRtgEjkfW+a19BofrvEalS9wh/jkboea\nd8rDu8wMbLAl77dq1c6dpJDgzoQkekoL4H4GU8QB6GY=\n=fot9\n-----END PGP PUBLIC KEY BLOCK-----\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/keys/trusted",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"keys",
+										"trusted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/apiKey",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/apiKey",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"apiKey"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/apiKey",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/apiKey",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"apiKey"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/security/apiKey",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/security/apiKey",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"security",
+										"apiKey"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/v2/security/permissions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/v2/security/permissions",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"v2",
+										"security",
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/v2/security/permissions/key",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/v2/security/permissions/alex-test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"v2",
+										"security",
+										"permissions",
+										"alex-test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "System",
+					"item": [
+						{
+							"name": "artifactory/api/system/licenses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/licenses",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"licenses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/license",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/license",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"license"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/version",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/version",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"version"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/service_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/service_id",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"service_id"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/configuration",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/configuration",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"configuration"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/configuration",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/yaml",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "security:\n    samlSettings:\n        enableIntegration: true\n        certificate: test-certificate\n        emailAttribute: email\n        groupAttribute: group\n        loginUrl: test-login-url\n        logoutUrl: test-logout-url\n        noAutoUserCreation: true\n        serviceProviderName: test\n        allowUserToAccessProfile: true\n        autoRedirect: true\n        syncGroups: true\n        verifyAudienceRestriction: true\n        useEncryptedAssertion: false"
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/configuration",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"configuration"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/ping",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}/artifactory/api/system/ping",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"ping"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/security/certificates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/security/certificates",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"security",
+										"certificates"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/security/certificates",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "file",
+									"file": {}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/security/certificates/local",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"security",
+										"certificates",
+										"local"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/verifyconnection",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"endpoint\": \"http://docker.for.mac.host.internal:8089/v1/ping\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/verifyconnection",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"verifyconnection"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/configuration/webServer",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pairName\": \"test-gpg-key\",\n    \"pairType\": \"GPG\",\n    \"alias\": \"test-gpg\",\n    \"privateKey\": \"-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\n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\nzoQkekoL4H4GU8QB6GY=\n=JQxa\n-----END PGP PRIVATE KEY BLOCK-----\",\n    \"publicKey\": \"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\nxo0EYGrVNAEEAPD3YDt0qP8kSV8bnmqVP5XDPoN40gEpUGtDLjAn6d+cRMeNGaru\n6H0bdgwQpND8Gz9Qx2pCNSxlWDZpY1fCvRQ174iGjvO/3527f148cgKNZtwLsKrZ\nlaW8z3tB2LuCM2e97ijX+lzRf7YJUXU3pOfoCFWpOPoRg1CHV0NyHl0VABEBAAHN\nFmFsYW4gPGFsYW5uQGpmcm9nLmNvbT7CrQQTAQoAFwUCYGrVNAIbLwMLCQcDFQoI\nAh4BAheAAAoJENzR2QJlA6glZmsD/iqhnNFy1Elj3hGL0HaEzeb+KDpcSL/L5a/8\nWIGCQFeLcEn9lC+68b/eERKGIoXJ7z8HfPDFNRTKvomKIdAqFiAeDAUUD0B82rsx\nxDf8USnTwJlnd0bPe9nxgXYcrwioEYbPVYGl3jima/KQrbW8XlKyiypy4Nd66Wcn\nTuM6PwRFzo0EYGrVNAEEANVNINyfCQ+y1haaaAJ0uCgx3dW52LwcZfvOP6i798WZ\ndyGA+WSUCEcrklUwZ595E2dNkNKptksftwSeQ0+EH5S1ZlEaq2YUv8fCx32F1ckh\nD3eHaCKRxTPx/zbb96q4ruEGKhOBXceid3o341HbtGVKi8VjBx3XNukskQ+EOvgt\nABEBAAHCwIMEGAEKAA8FAmBq1TQFCQ8JnAACGy4AqAkQ3NHZAmUDqCWdIAQZAQoA\nBgUCYGrVNAAKCRBddQ63FhKl6NmDBACqxC4lAnsCQERjs02LYAEAwVDhDf0rXxD0\nH+hKDyxQZc80M7WIpXaBHmbs8ekJRnY7JHcer7sizDMdfkR3xB62jNGhc0XiW6nc\nmlwvtWt3+E6AkObmWnocRy5ztTQI0gye0B3cPs2txE2fCs+WD7yLRnM3HqIAh83W\nCccvh0+uG96dBADlPbZ8g8q6bkeeT72gOi3OCN0A+Y8lUPifhrpSiI9xMpP3aomM\nbeZJB6fWjEzNoblQ9jUr/E54bF9jMr6L3uE4OJH9SYJ/HvqcKJC+1TFeQ9lXR7g7\nMTdfxEvhMDhcsd/pYIgrzvDry+B2+jANW10R1yejT/C8QdlWIndDsEsaKs6NBGBq\n1TQBBADJD6gVGTMGb/WsfnSaL5yA3AEMczhPqxD4FDC0vzqGG3XzKgxtmW8cJXls\nNCK80F61daxJ72/UAmfxHbNP1qmHSiosEe+h1YZ/Zo3pN/LODzg9JrOs9A2xwjqE\nnU9mS0jDz5oEQtr9K4+YKOdJvmuaN85ueBizfQ1TYRNuDtmbnQARAQABwsCDBBgB\nCgAPBQJgatU0BQkPCZwAAhsuAKgJENzR2QJlA6glnSAEGQEKAAYFAmBq1TQACgkQ\nehctgYvYtmh38gP6A9lnQaLuVnTElJLy2XSDTqwWOcy/5J842S/xdQEsWUMXh4I5\nmlotkZwkrdvXp8E/F3P8X7GbxhNAVZX+Xcm95V3g/kmP+Pq7PeUmoZR5LD8ppBfO\n7v6XgaUhraUPAZl6lx4L5pYNCX9JBNUtQAG9xIoap4slvksdz5SN/BwSgV6qqwQA\ntr4YTDXvLyoWwMFB2FjWcw4zwV+7yHwGzogKfGCQy5qVlDoQyWdkwwF1awyk5RIe\nZxwPZ2SDaiznOmZ+4LjR2NPmjnT96d9RKRtgEjkfW+a19BofrvEalS9wh/jkboea\nd8rDu8wMbLAl77dq1c6dpJDgzoQkekoL4H4GU8QB6GY=\n=fot9\n-----END PGP PUBLIC KEY BLOCK-----\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/configuration/webServer",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"configuration",
+										"webServer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/saml/config",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"pairName\": \"test-gpg-key\",\n    \"pairType\": \"GPG\",\n    \"alias\": \"test-gpg\",\n    \"privateKey\": \"-----BEGIN PGP PRIVATE KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\n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\nzoQkekoL4H4GU8QB6GY=\n=JQxa\n-----END PGP PRIVATE KEY BLOCK-----\",\n    \"publicKey\": \"-----BEGIN PGP PUBLIC KEY BLOCK-----\nVersion: Keybase OpenPGP v1.0.0\nComment: https://keybase.io/crypto\n\nxo0EYGrVNAEEAPD3YDt0qP8kSV8bnmqVP5XDPoN40gEpUGtDLjAn6d+cRMeNGaru\n6H0bdgwQpND8Gz9Qx2pCNSxlWDZpY1fCvRQ174iGjvO/3527f148cgKNZtwLsKrZ\nlaW8z3tB2LuCM2e97ijX+lzRf7YJUXU3pOfoCFWpOPoRg1CHV0NyHl0VABEBAAHN\nFmFsYW4gPGFsYW5uQGpmcm9nLmNvbT7CrQQTAQoAFwUCYGrVNAIbLwMLCQcDFQoI\nAh4BAheAAAoJENzR2QJlA6glZmsD/iqhnNFy1Elj3hGL0HaEzeb+KDpcSL/L5a/8\nWIGCQFeLcEn9lC+68b/eERKGIoXJ7z8HfPDFNRTKvomKIdAqFiAeDAUUD0B82rsx\nxDf8USnTwJlnd0bPe9nxgXYcrwioEYbPVYGl3jima/KQrbW8XlKyiypy4Nd66Wcn\nTuM6PwRFzo0EYGrVNAEEANVNINyfCQ+y1haaaAJ0uCgx3dW52LwcZfvOP6i798WZ\ndyGA+WSUCEcrklUwZ595E2dNkNKptksftwSeQ0+EH5S1ZlEaq2YUv8fCx32F1ckh\nD3eHaCKRxTPx/zbb96q4ruEGKhOBXceid3o341HbtGVKi8VjBx3XNukskQ+EOvgt\nABEBAAHCwIMEGAEKAA8FAmBq1TQFCQ8JnAACGy4AqAkQ3NHZAmUDqCWdIAQZAQoA\nBgUCYGrVNAAKCRBddQ63FhKl6NmDBACqxC4lAnsCQERjs02LYAEAwVDhDf0rXxD0\nH+hKDyxQZc80M7WIpXaBHmbs8ekJRnY7JHcer7sizDMdfkR3xB62jNGhc0XiW6nc\nmlwvtWt3+E6AkObmWnocRy5ztTQI0gye0B3cPs2txE2fCs+WD7yLRnM3HqIAh83W\nCccvh0+uG96dBADlPbZ8g8q6bkeeT72gOi3OCN0A+Y8lUPifhrpSiI9xMpP3aomM\nbeZJB6fWjEzNoblQ9jUr/E54bF9jMr6L3uE4OJH9SYJ/HvqcKJC+1TFeQ9lXR7g7\nMTdfxEvhMDhcsd/pYIgrzvDry+B2+jANW10R1yejT/C8QdlWIndDsEsaKs6NBGBq\n1TQBBADJD6gVGTMGb/WsfnSaL5yA3AEMczhPqxD4FDC0vzqGG3XzKgxtmW8cJXls\nNCK80F61daxJ72/UAmfxHbNP1qmHSiosEe+h1YZ/Zo3pN/LODzg9JrOs9A2xwjqE\nnU9mS0jDz5oEQtr9K4+YKOdJvmuaN85ueBizfQ1TYRNuDtmbnQARAQABwsCDBBgB\nCgAPBQJgatU0BQkPCZwAAhsuAKgJENzR2QJlA6glnSAEGQEKAAYFAmBq1TQACgkQ\nehctgYvYtmh38gP6A9lnQaLuVnTElJLy2XSDTqwWOcy/5J842S/xdQEsWUMXh4I5\nmlotkZwkrdvXp8E/F3P8X7GbxhNAVZX+Xcm95V3g/kmP+Pq7PeUmoZR5LD8ppBfO\n7v6XgaUhraUPAZl6lx4L5pYNCX9JBNUtQAG9xIoap4slvksdz5SN/BwSgV6qqwQA\ntr4YTDXvLyoWwMFB2FjWcw4zwV+7yHwGzogKfGCQy5qVlDoQyWdkwwF1awyk5RIe\nZxwPZ2SDaiznOmZ+4LjR2NPmjnT96d9RKRtgEjkfW+a19BofrvEalS9wh/jkboea\nd8rDu8wMbLAl77dq1c6dpJDgzoQkekoL4H4GU8QB6GY=\n=fot9\n-----END PGP PUBLIC KEY BLOCK-----\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/saml/config",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"saml",
+										"config"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/system/usage",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productId\": \"slack-connector/v0.1.0\",\n    \"features\": [\n        {\n            \"featureId\": \"Partner/ACC-017414\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/system/usage",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"system",
+										"usage"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Event",
+					"item": [
+						{
+							"name": "/event/api/v1/subscriptions",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "JFrog-Slack-Integration/0.7.2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/event/api/v1/subscriptions",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"event",
+										"api",
+										"v1",
+										"subscriptions"
+									],
+									"query": [
+										{
+											"key": "url",
+											"value": "https://alexh.ngrok.io/webhooks/jfrog/rt",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/event/api/v1/subscriptions/{{name}}",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "JFrog-Slack-Integration/0.7.2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/event/api/v1/subscriptions/JiraCloudBuildWebhook",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"event",
+										"api",
+										"v1",
+										"subscriptions",
+										"JiraCloudBuildWebhook"
+									],
+									"query": [
+										{
+											"key": "url",
+											"value": "https://alexh.ngrok.io/webhooks/jfrog/rt",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/event/api/v1/subscriptions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"Alex_Test\",\n    \"description\": \"Alex Test\",\n    \"enabled\": true,\n    \"event_filter\": {\n        \"domain\": \"artifact\",\n        \"event_types\": [\n            \"deployed\",\n            \"deleted\"\n        ],\n        \"criteria\": {\n            \"anyLocal\": false,\n            \"anyRemote\": false,\n            \"includePatterns\": null,\n            \"excludePatterns\": null,\n            \"repoKeys\": [\n                \"test-local\"\n            ]\n        }\n    },\n    \"handlers\": [\n        {\n            \"handler_type\": \"webhook\",\n            \"url\": \"https://81be0f9ce2df.ngrok.io/api/artifactory\",\n            \"secret\": \"\",\n            \"custom_http_headers\": [\n                {\n                    \"name\": \"X-Slack-Channel-Id\",\n                    \"value\": \"C01RJ2B91SL\"\n                }\n            ]\n        },\n        {\n            \"handler_type\": \"webhook\",\n            \"url\": \"https://test.ngrok.io/api/artifactory\",\n            \"secret\": \"\",\n            \"custom_http_headers\": [\n                {\n                    \"name\": \"foo\",\n                    \"value\": \"bar\"\n                }\n            ]\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/event/api/v1/subscriptions",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"event",
+										"api",
+										"v1",
+										"subscriptions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/event/api/v1/subscriptions/test",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"JiraCloudBuildWebhook\",\n    \"description\": \"Jira cloud webhook for build upload or promoted\",\n    \"enabled\": true,\n    \"event_filter\": {\n        \"domain\": \"build\",\n        \"event_types\": [\n            \"uploaded\",\n            \"promoted\"\n        ],\n        \"criteria\": {\n            \"anyBuild\": true,\n            \"excludePatterns\": null,\n            \"includePatterns\": null,\n            \"selectedBuilds\": null\n        }\n    },\n    \"handlers\": [\n        {\n            \"handler_type\": \"webhook\",\n            \"url\": \"https://alex-jiracloud.ngrok.io/api/build-webhook\",\n            \"secret\": \"2KA1dDlwz9bp2Hh0FPxDdCYSEFmsNjvAvFdhp0Qt\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/event/api/v1/subscriptions/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"event",
+										"api",
+										"v1",
+										"subscriptions",
+										"test"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Repository",
+					"item": [
+						{
+							"name": "artifactory/api/repositories/{{repo_key}}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}/artifactory/api/repositories/alex-docker-remote",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"artifactory",
+										"api",
+										"repositories",
+										"alex-docker-remote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/repositories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/repositories",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"repositories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/repositories/{{repo_key}}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"vcs-remote\",\n    \"packageType\": \"vcs\",\n    \"description\": \"\",\n    \"notes\": \"\",\n    \"includesPattern\": \"**/*\",\n    \"excludesPattern\": \"\",\n    \"signedUrlTtl\": 90,\n    \"enableComposerSupport\": false,\n    \"enableNuGetSupport\": false,\n    \"enableGemsSupport\": false,\n    \"enableNpmSupport\": false,\n    \"enableBowerSupport\": false,\n    \"enableChefSupport\": false,\n    \"enableCocoaPodsSupport\": false,\n    \"enableConanSupport\": false,\n    \"enableDebianSupport\": false,\n    \"debianTrivialLayout\": false,\n    \"ddebSupported\": false,\n    \"enablePypiSupport\": false,\n    \"enablePuppetSupport\": false,\n    \"enableDockerSupport\": false,\n    \"dockerApiVersion\": \"V2\",\n    \"blockPushingSchema1\": true,\n    \"forceNugetAuthentication\": false,\n    \"forceConanAuthentication\": false,\n    \"enableVagrantSupport\": false,\n    \"enableGitLfsSupport\": false,\n    \"enableDistRepoSupport\": false,\n    \"priorityResolution\": false,\n    \"url\": \"https://github.com/\",\n    \"username\": \"\",\n    \"password\": \"\",\n    \"disableProxy\": false,\n    \"handleReleases\": true,\n    \"handleSnapshots\": true,\n    \"suppressPomConsistencyChecks\": false,\n    \"remoteRepoChecksumPolicyType\": \"generate-if-absent\",\n    \"hardFail\": false,\n    \"offline\": false,\n    \"blackedOut\": false,\n    \"storeArtifactsLocally\": true,\n    \"socketTimeoutMillis\": 15000,\n    \"localAddress\": \"\",\n    \"retrievalCachePeriodSecs\": 7200,\n    \"assumedOfflinePeriodSecs\": 300,\n    \"missedRetrievalCachePeriodSecs\": 1800,\n    \"metadataRetrievalTimeoutSecs\": 60,\n    \"unusedArtifactsCleanupPeriodHours\": 0,\n    \"fetchJarsEagerly\": false,\n    \"fetchSourcesEagerly\": false,\n    \"shareConfiguration\": false,\n    \"synchronizeProperties\": false,\n    \"maxUniqueSnapshots\": 5,\n    \"maxUniqueTags\": 0,\n    \"propertySets\": [\n        \"artifactory\"\n    ],\n    \"archiveBrowsingEnabled\": false,\n    \"listRemoteFolderItems\": false,\n    \"rejectInvalidJars\": false,\n    \"allowAnyHostAuth\": false,\n    \"enableCookieManagement\": false,\n    \"enableTokenAuthentication\": false,\n    \"propagateQueryParams\": false,\n    \"blockMismatchingMimeTypes\": true,\n    \"mismatchingMimeTypesOverrideList\": \"\",\n    \"bypassHeadRequests\": false,\n    \"disableUrlNormalization\": false,\n    \"contentSynchronisation\": {\n        \"enabled\": false,\n        \"statistics\": {\n            \"enabled\": false\n        },\n        \"properties\": {\n            \"enabled\": false\n        },\n        \"source\": {\n            \"originAbsenceDetection\": false\n        }\n    },\n    \"externalDependenciesEnabled\": false,\n    \"downloadRedirect\": false,\n    \"cdnRedirect\": false,\n    \"bowerRegistryUrl\": \"https://registry.bower.io\",\n    \"cargoInternalIndex\": false,\n    \"cargoAnonymousAccess\": false,\n    \"gitRegistryUrl\": \"https://github.com/rust-lang/crates.io-index\",\n    \"xrayIndex\": false,\n    \"xrayDataTtl\": 90,\n    \"pyPIRegistryUrl\": \"https://pypi.org\",\n    \"composerRegistryUrl\": \"https://packagist.org\",\n    \"terraformRegistryUrl\": \"https://registry.terraform.io\",\n    \"terraformProvidersUrl\": \"https://releases.hashicorp.com\",\n    \"vcsType\": \"GIT\",\n    \"podsSpecsRepoUrl\": \"https://github.com/CocoaPods/Specs\",\n    \"pyPIRepositorySuffix\": \"simple\",\n    \"vcsGitProvider\": \"GITHUB\",\n    \"rclass\": \"remote\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/repositories/vcs-remote",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"repositories",
+										"vcs-remote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/repositories/{{repo_key}}",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"vcs-remote\",\n    \"packageType\": \"vcs\",\n    \"description\": \"\",\n    \"notes\": \"\",\n    \"includesPattern\": \"**/*\",\n    \"excludesPattern\": \"\",\n    \"repoLayoutRef\": \"simple-default\",\n    \"signedUrlTtl\": 90,\n    \"enableComposerSupport\": false,\n    \"enableNuGetSupport\": false,\n    \"enableGemsSupport\": false,\n    \"enableNpmSupport\": false,\n    \"enableBowerSupport\": false,\n    \"enableChefSupport\": false,\n    \"enableCocoaPodsSupport\": false,\n    \"enableConanSupport\": false,\n    \"enableDebianSupport\": false,\n    \"debianTrivialLayout\": false,\n    \"ddebSupported\": false,\n    \"enablePypiSupport\": false,\n    \"enablePuppetSupport\": false,\n    \"enableDockerSupport\": false,\n    \"dockerApiVersion\": \"V2\",\n    \"blockPushingSchema1\": true,\n    \"forceNugetAuthentication\": false,\n    \"forceConanAuthentication\": false,\n    \"enableVagrantSupport\": false,\n    \"enableGitLfsSupport\": false,\n    \"enableDistRepoSupport\": false,\n    \"priorityResolution\": false,\n    \"url\": \"https://github.com/\",\n    \"username\": \"\",\n    \"password\": \"\",\n    \"disableProxy\": false,\n    \"handleReleases\": true,\n    \"handleSnapshots\": true,\n    \"suppressPomConsistencyChecks\": false,\n    \"remoteRepoChecksumPolicyType\": \"generate-if-absent\",\n    \"hardFail\": false,\n    \"offline\": false,\n    \"blackedOut\": false,\n    \"storeArtifactsLocally\": true,\n    \"socketTimeoutMillis\": 15000,\n    \"localAddress\": \"\",\n    \"retrievalCachePeriodSecs\": 7200,\n    \"assumedOfflinePeriodSecs\": 300,\n    \"missedRetrievalCachePeriodSecs\": 1800,\n    \"metadataRetrievalTimeoutSecs\": 60,\n    \"unusedArtifactsCleanupPeriodHours\": 0,\n    \"fetchJarsEagerly\": false,\n    \"fetchSourcesEagerly\": false,\n    \"shareConfiguration\": false,\n    \"synchronizeProperties\": false,\n    \"maxUniqueSnapshots\": 5,\n    \"maxUniqueTags\": 0,\n    \"propertySets\": [\n        \"artifactory\"\n    ],\n    \"archiveBrowsingEnabled\": false,\n    \"listRemoteFolderItems\": false,\n    \"rejectInvalidJars\": false,\n    \"allowAnyHostAuth\": false,\n    \"enableCookieManagement\": false,\n    \"enableTokenAuthentication\": false,\n    \"propagateQueryParams\": false,\n    \"blockMismatchingMimeTypes\": true,\n    \"mismatchingMimeTypesOverrideList\": \"\",\n    \"bypassHeadRequests\": false,\n    \"disableUrlNormalization\": false,\n    \"contentSynchronisation\": {\n        \"enabled\": false,\n        \"statistics\": {\n            \"enabled\": false\n        },\n        \"properties\": {\n            \"enabled\": false\n        },\n        \"source\": {\n            \"originAbsenceDetection\": false\n        }\n    },\n    \"externalDependenciesEnabled\": false,\n    \"downloadRedirect\": false,\n    \"cdnRedirect\": false,\n    \"bowerRegistryUrl\": \"https://registry.bower.io\",\n    \"cargoInternalIndex\": false,\n    \"cargoAnonymousAccess\": false,\n    \"gitRegistryUrl\": \"https://github.com/rust-lang/crates.io-index\",\n    \"xrayIndex\": false,\n    \"xrayDataTtl\": 90,\n    \"pyPIRegistryUrl\": \"https://pypi.org\",\n    \"composerRegistryUrl\": \"https://packagist.org\",\n    \"terraformRegistryUrl\": \"https://registry.terraform.io\",\n    \"terraformProvidersUrl\": \"https://releases.hashicorp.com\",\n    \"vcsType\": \"GIT\",\n    \"podsSpecsRepoUrl\": \"https://github.com/CocoaPods/Specs\",\n    \"pyPIRepositorySuffix\": \"simple\",\n    \"vcsGitProvider\": \"GITHUB\",\n    \"rclass\": \"remote\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/repositories/vcs-remote",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"repositories",
+										"vcs-remote"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/repositories/{{repo_key}}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"helm-remote2\",\n    \"packageType\": \"helm\",\n    \"description\": \"\",\n    \"notes\": \"\",\n    \"includesPattern\": \"**/*\",\n    \"excludesPattern\": \"\",\n    \"repoLayoutRef\": \"helm-default\",\n    \"enableComposerSupport\": false,\n    \"enableNuGetSupport\": false,\n    \"enableGemsSupport\": false,\n    \"enableNpmSupport\": false,\n    \"enableBowerSupport\": false,\n    \"enableChefSupport\": false,\n    \"enableCocoaPodsSupport\": false,\n    \"enableConanSupport\": false,\n    \"enableDebianSupport\": false,\n    \"debianTrivialLayout\": false,\n    \"ddebSupported\": false,\n    \"enablePypiSupport\": false,\n    \"enablePuppetSupport\": false,\n    \"enableDockerSupport\": false,\n    \"dockerApiVersion\": \"V2\",\n    \"blockPushingSchema1\": true,\n    \"forceNugetAuthentication\": false,\n    \"enableVagrantSupport\": false,\n    \"enableGitLfsSupport\": false,\n    \"enableDistRepoSupport\": false,\n    \"priorityResolution\": false,\n    \"hideUnauthorizedResources\": false,\n    \"artifactoryRequestsCanRetrieveRemoteArtifacts\": false,\n    \"resolveDockerTagsByTimestamp\": false,\n    \"keyPair\": \"\",\n    \"pomRepositoryReferencesCleanupPolicy\": \"discard_active_reference\",\n    \"defaultDeploymentRepo\": \"\",\n    \"virtualRetrievalCachePeriodSecs\": 600,\n    \"forceMavenAuthentication\": false,\n    \"debianDefaultArchitectures\": \"i386,amd64\",\n    \"useNamespaces\": false,\n    \"cargoAnonymousAccess\": false,\n    \"rclass\": \"remote\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/repositories/helm-remote2",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"repositories",
+										"helm-remote2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "artifactory/api/repositories/{{repo_key}} Copy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"alexh-npm-local\",\n    \"packageType\": \"npm\",\n    \"description\": \"\",\n    \"notes\": \"\",\n    \"includesPattern\": \"**/*\",\n    \"excludesPattern\": \"\",\n    \"repoLayoutRef\": \"npm-default\",\n    \"signedUrlTtl\": 30,\n    \"enableComposerSupport\": false,\n    \"enableNuGetSupport\": false,\n    \"enableGemsSupport\": false,\n    \"enableNpmSupport\": true,\n    \"enableBowerSupport\": false,\n    \"enableChefSupport\": false,\n    \"enableCocoaPodsSupport\": false,\n    \"enableConanSupport\": false,\n    \"enableDebianSupport\": false,\n    \"debianTrivialLayout\": false,\n    \"ddebSupported\": false,\n    \"enablePypiSupport\": false,\n    \"enablePuppetSupport\": false,\n    \"enableDockerSupport\": false,\n    \"dockerApiVersion\": \"V2\",\n    \"blockPushingSchema1\": true,\n    \"forceNugetAuthentication\": false,\n    \"forceConanAuthentication\": false,\n    \"enableVagrantSupport\": false,\n    \"enableGitLfsSupport\": false,\n    \"enableDistRepoSupport\": false,\n    \"priorityResolution\": false,\n    \"checksumPolicyType\": \"client-checksums\",\n    \"handleReleases\": true,\n    \"handleSnapshots\": true,\n    \"maxUniqueSnapshots\": 0,\n    \"maxUniqueTags\": 0,\n    \"snapshotVersionBehavior\": \"unique\",\n    \"suppressPomConsistencyChecks\": true,\n    \"blackedOut\": false,\n    \"propertySets\": [\n        \"artifactory\"\n    ],\n    \"archiveBrowsingEnabled\": false,\n    \"calculateYumMetadata\": false,\n    \"enableFileListsIndexing\": false,\n    \"yumRootDepth\": 0,\n    \"dockerTagRetention\": 1,\n    \"enableComposerV1Indexing\": false,\n    \"terraformType\": \"MODULE\",\n    \"downloadRedirect\": false,\n    \"cdnRedirect\": false,\n    \"xrayIndex\": true,\n    \"xrayDataTtl\": 90,\n    \"cargoAnonymousAccess\": false,\n    \"cargoInternalIndex\": false,\n    \"rclass\": \"local\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/repositories/alexh-test-local",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"repositories",
+										"alexh-test-local"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Access",
+					"item": [
+						{
+							"name": "access/api/v1/cert/root",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/cert/root",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"cert",
+										"root"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/tokens",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/tokens",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"tokens"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/tokens",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();",
+											"pm.environment.set(\"tokenId\", jsonData.token_id);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"grant_type\": \"client_credentials\",\n    \"username\": \"admin\",\n    \"project_key\": \"alex-test\",\n    \"scope\": \"applied-permissions/user applied-permissions/admin\",\n    \"refreshable\": false,\n    \"description\": \"Test token\",\n    \"audience\": \"*@*\",\n    \"expires_in\": 10800,\n    \"force_revocable\": false,\n    \"include_reference_token\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}/access/api/v1/tokens",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"tokens"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/tokens form",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const jsonData = pm.response.json();",
+											"pm.environment.set(\"tokenId\", jsonData.token_id);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "grant_type",
+											"value": "client_credentials",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "scope",
+											"value": "applied-permissions/user applied-permissions/admin",
+											"type": "text"
+										},
+										{
+											"key": "refreshable",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Test token",
+											"type": "text"
+										},
+										{
+											"key": "audience",
+											"value": "*@*",
+											"type": "text"
+										},
+										{
+											"key": "expires_in",
+											"value": "10800",
+											"type": "text"
+										},
+										{
+											"key": "force_revocable",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/tokens",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"tokens"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/tokens/{{token_id}}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}/access/api/v1/tokens/425ab02b-d7bb-46c5-b209-f5faf87e64b0",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"tokens",
+										"425ab02b-d7bb-46c5-b209-f5faf87e64b0"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/tokens/{{token_id}}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"grant_type\": \"client_credentials\",\n    \"username\": \"admin\",\n    \"scope\": \"applied-permissions/admin\",\n    \"expires_in\": \"7200\",\n    \"refreshable\": false,\n    \"description\": \"Test token\",\n    \"audience\": \"*@*\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/tokens/{{tokenId}}",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"tokens",
+										"{{tokenId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/vault/configs/hashicorp",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"key\": \"alex-test\",\n    \"type\": \"HashiCorpVault\",\n    \"url\": \"https://alex-vault.ngrok.io\",\n    \"auth\": {\n        \"type\": \"AppRole\",\n        \"roleId\": \"e031f11a-24b5-0a55-6e89-11bdcde2e56d\",\n        \"secretId\": \"33ec8e7e-5112-e2dc-8d9b-ba6fae6d335a\"\n    },\n    \"mounts\": [\n        {\n            \"path\": \"secret\",\n            \"type\": \"KV2\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/vault/configs/hashicorp",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"vault",
+										"configs",
+										"hashicorp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/vault/configs/test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/vault/configs/test",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"vault",
+										"configs",
+										"test"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/vault/configs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/vault/configs",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"vault",
+										"configs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/system/backup/export",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/system/backup/export",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"system",
+										"backup",
+										"export"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "access/api/v1/cert/root",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/cert/root",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"cert",
+										"root"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Build",
+					"item": [
+						{
+							"name": "build/{{buildName}}/{{buildNumber}}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/build/alex-test/1",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"build",
+										"alex-test",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "build",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"version\": \"1.0.1\",\n    \"name\": \"alex-test\",\n    \"number\": \"1\",\n    \"buildAgent\": {\n        \"name\": \"Generic\"\n    },\n    \"agent\": {\n        \"name\": \"Jenkins\"\n    },\n    \"started\": \"2023-07-14T16:24:42.116+0300\",\n    \"artifactoryPrincipal\": \"alexh\",\n    \"url\": \"http://my-ci-server/jenkins/job/My-project-name/28/\",\n    \"vcsRevision\": \"e4ab2e493afd369ae7bdc90d69c912e8346a3463\",\n    \"vcsUrl\": \"https://github.com/github-user/my-project.git\",\n    \"modules\": [\n        {\n            \"id\": \"org.jfrog.test:multi:2.36-2-SNAPSHOT\",\n            \"artifacts\": [\n                {\n                    \"type\": \"pom\",\n                    \"sha1\": \"a1ab9222c219ec885ce4374b77cc4bd93485c6c8\",\n                    \"md5\": \"495a5e916f0e308a8ed4fc170e4d9136\",\n                    \"name\": \"multi-2.36-2-SNAPSHOT.pom\"\n                }\n            ]\n        }\n    ],\n    \"issues\": {\n        \"tracker\": {\n            \"name\": \"JIRA\"\n        },\n        \"aggregateBuildIssues\": false,\n        \"affectedIssues\": [\n            {\n                \"key\": \"AT-5\",\n                \"url\": \"https://jiracloud-connector-alexh.atlassian.net/browse/AT-5\",\n                \"summary\": \"Stage testing\",\n                \"aggregated\": false\n            }\n        ]\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/build",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"build"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Artifacts",
+					"item": [
+						{
+							"name": "storage/{repoKey}/{filePath}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/storage/alex-generic-local/module_test_2.zip",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"port": "{{jpdPort}}",
+									"path": [
+										"artifactory",
+										"api",
+										"storage",
+										"alex-generic-local",
+										"module_test_2.zip"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Distribution",
+					"item": [
+						{
+							"name": "api/v1/release_bundle",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"alexh-test-bundle\",\n  \"version\": \"1.0.0\",\n  \"dry_run\": false,\n  \"sign_immediately\": false,\n  \"storing_repository\": \"release-bundle\",\n  \"description\": \"Test release bundle\",\n  \"release_notes\": {\n    \"syntax\": \"plain_text\",\n    \"content\": \"Foo bar\"\n  }, \n  \"spec\": {\n    \"queries\": [\n      {\n        \"aql\": \"items.find({ \\\"repo\\\" : \\\"alexh-generic-local\\\" })\",\n        \"query_name\": \"query-1\",\n        \"mappings\": [\n          {\n            \"input\": \"regex\",\n            \"output\": \"$1/$2\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}/distribution/api/v1/release_bundle",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"distribution",
+										"api",
+										"v1",
+										"release_bundle"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "artifactory/api/replications",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/replications/test-npm-local",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"artifactory",
+								"api",
+								"replications",
+								"test-npm-local"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artifactory/api/oauth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/oauth",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"artifactory",
+								"api",
+								"oauth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artifactory/storageinfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/artifactory/api/storageinfo?project=test",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"artifactory",
+								"api",
+								"storageinfo"
+							],
+							"query": [
+								{
+									"key": "project",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "router/api/v1/system/health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/router/api/v1/system/health",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"router",
+								"api",
+								"v1",
+								"system",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/ui/api/v1/ui/proxies",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"test\",\n    \"host\": \"http://localhost\",\n    \"port\": 8888\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/ui/api/v1/ui/proxies",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"ui",
+								"api",
+								"v1",
+								"ui",
+								"proxies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "Environment",
+					"item": [
+						{
+							"name": "projects/{{projectKey}}/environments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"My Env\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}/access/api/v1/projects/{{projectKey}}/environments",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"projects",
+										"{{projectKey}}",
+										"environments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "projects/{{projectKey}}/environments",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"My Env\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{jpdHost}}/access/api/v1/projects/{{projectKey}}/environments",
+									"host": [
+										"{{jpdHost}}"
+									],
+									"path": [
+										"access",
+										"api",
+										"v1",
+										"projects",
+										"{{projectKey}}",
+										"environments"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "projects/{{projectKey}}",
+					"request": {
+						"method": "HEAD",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}/access/api/v1/projects/{{projectKey}}",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"display_name\": \"My Project\",\n    \"description\": \"My Project\",\n    \"admin_privileges\": {\n        \"manage_members\": true,\n        \"manage_resources\": true,\n        \"index_resources\": true\n    },\n    \"storage_quota_bytes\": 1073741824,\n    \"soft_limit\": false,\n    \"storage_quota_email_notification\": true,\n    \"project_key\": \"myproj\"\n}"
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"display_name\": \"My Project\",\n    \"description\": \"My Project\",\n    \"admin_privileges\": {\n        \"manage_members\": true,\n        \"manage_resources\": true,\n        \"index_resources\": true\n    },\n    \"storage_quota_bytes\": 1073741824,\n    \"soft_limit\": true,\n    \"storage_quota_email_notification\": true,\n    \"project_key\": \"myproj\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}/access/api/v1/projects/{{projectKey}}",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/users",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/users/{{user}}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/users/alexh",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"users",
+								"alexh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/users/{{user}}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"alexh\",\n  \"roles\": [\n    \"developer\"\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/users/alexh",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"users",
+								"alexh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/groups",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/groups/{{groupName}}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test-dev-group\",\n    \"roles\": [\n        \"Developer\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/groups/test-dev-group",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"groups",
+								"test-dev-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/groups/{{groupName}}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/groups/test-dev-group",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"groups",
+								"test-dev-group"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/{{projectKey}}/roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/{{projectKey}}/roles",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"{{projectKey}}",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/_/attach/repositories/{repoName}/{projectKey}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/_/attach/repositories/dockerhub/test",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"_",
+								"attach",
+								"repositories",
+								"dockerhub",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "projects/_/attach/repositories/{repoName}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/access/api/v1/projects/_/attach/repositories/dockerhub",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"access",
+								"api",
+								"v1",
+								"projects",
+								"_",
+								"attach",
+								"repositories",
+								"dockerhub"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xray",
+			"item": [
+				{
+					"name": "xray/api/v2/policies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/policies",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/policies/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/policies/Alex-Test",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"policies",
+								"Alex-Test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/v2/policies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Alex-Test\",\n    \"type\": \"security\",\n    \"author\": \"alexh\",\n    \"rules\": [\n        {\n            \"name\": \"all-severity\",\n            \"priority\": 1,\n            \"actions\": {\n                \"block_download\": {\n                    \"unscanned\": false,\n                    \"active\": false\n                }\n            },\n            \"criteria\": {\n                \"fix_version_dependant\": false,\n                \"malicious_package\": false,\n                \"min_severity\": \"unknown\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/policies",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/v2/policies/{policy_name}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Alex-Test\",\n    \"type\": \"security\",\n    \"author\": \"alexh@jfrog.com\",\n    \"rules\": [\n        {\n            \"name\": \"all-severity\",\n            \"priority\": 1,\n            \"actions\": {\n                \"block_download\": {\n                    \"unscanned\": false,\n                    \"active\": false\n                }\n            },\n            \"criteria\": {\n                \"fix_version_dependant\": false,\n                \"malicious_package\": false,\n                \"min_severity\": \"All severities\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/policies/Alex-Test",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"policies",
+								"Alex-Test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "api/v2/policies/{policy_name}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Alex-OpRisk-2\",\n    \"type\": \"operational_risk\",\n    \"description\": \"Alex-OpRisk-2\",\n    \"author\": \"alexh\",\n    \"rules\": [\n        {\n            \"name\": \"all-risks\",\n            \"priority\": 1,\n            \"actions\": {\n                \"webhooks\": [\n                    \"Alex-OpRisk-Capture\"\n                ],\n                \"fail_build\": true,\n                \"block_download\": {\n                    \"unscanned\": true,\n                    \"active\": true\n                },\n                \"block_release_bundle_distribution\": true,\n                \"custom_severity\": \"High\",\n                \"notify_watch_recipients\": true,\n                \"notify_deployer\": true\n            },\n            \"criteria\": {\n                \"op_risk_custom\": {\n                    \"commits_less_than\": 10,\n                    \"committers_less_than\": 5,\n                    \"is_eol\": true,\n                    \"newer_versions_greater_than\": 5,\n                    \"release_cadence_per_year_less_than\": 5,\n                    \"release_date_greater_than_months\": 36,\n                    \"risk\": \"high\",\n                    \"use_and_condition\": false\n                }\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/policies/alex_op_test_2",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"policies",
+								"alex_op_test_2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/watches",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"general_data\": {\n        \"name\": \"AlexWatchTest2\",\n        \"description\": \"test\",\n        \"active\": true\n    },\n    \"project_resources\": {\n        \"resources\": [\n            {\n                \"type\": \"repository\",\n                \"name\": \"alexh-npm-local\",\n                \"bin_mgr_id\": \"default\",\n                \"filters\": [\n                    {\n                        \"type\": \"path-ant-patterns\",\n                        \"value\": {\n                            \"ExcludePatterns\": [],\n                            \"IncludePatterns\": [\n                                \"a*\"\n                            ]\n                        }\n                    }\n                ],\n                \"repo_type\": \"local\"\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/watches",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"watches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/watches/{name}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"general_data\": {\n        \"name\": \"test-remote-repo-2\",\n        \"description\": \"This is a new watch created using API V2\",\n        \"active\": true\n    },\n    \"project_resources\": {\n        \"resources\": [\n            {\n                \"type\": \"repository\",\n                \"name\": \"npm-remote\",\n                \"bin_mgr_id\": \"default\",\n                \"repo_type\": \"remote\"\n            }\n        ]\n    },\n    \"assigned_policies\": [\n        {\n            \"name\": \"Alex-OpRisk\",\n            \"type\": \"operational_risk\"\n        }\n    ]\n }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/watches/AlexProjectWatchTest",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"watches",
+								"AlexProjectWatchTest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/watches",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/watches",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"watches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/watches/{name}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/watches/AWS-Security-Hub",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"watches",
+								"AWS-Security-Hub"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/events/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/events/XRAY-228529",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"events",
+								"XRAY-228529"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/ignore_rules/{id}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/ignore_rules/e55a32b8-64d8-473b-552d-5e248d27672e",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"ignore_rules",
+								"e55a32b8-64d8-473b-552d-5e248d27672e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/ignore_rules",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"notes\": \"fake notes\",\n\t\"expires_at\": \"2023-02-23T00:00:00Z\",\n\t\"ignore_filters\": {\n\t\t\"cves\": [\"fake-cve\"],\n\t\t\"watches\": [\"tf_import_test\"]\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/ignore_rules",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"ignore_rules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/ignore_rules/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/ignore_rules/e55a32b8-64d8-473b-552d-5e248d27672e",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"ignore_rules",
+								"e55a32b8-64d8-473b-552d-5e248d27672e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/violations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"filters\": {\n        \"name_contains\": \"XRAY-228529\",\n        \"violation_type\": \"Security\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/violations",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"violations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/configuration/workersCount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJTZTFyY3pyR29BYTVRcHVvN2FtZFVuQ0hNdkVrOGRPT21PYXNvZ016b0k0In0.eyJleHQiOiJ7XCJyZXZvY2FibGVcIjpcInRydWVcIn0iLCJzdWIiOiJqZmFjQDAxZzc4ZjFjczQ4dzh0MDF3YWY5dzAxMzlxXC91c2Vyc1wvYWRtaW4iLCJzY3AiOiJhcHBsaWVkLXBlcm1pc3Npb25zXC9hZG1pbiIsImF1ZCI6IipAKiIsImlzcyI6ImpmZmVAMDAwIiwiZXhwIjoxNjg4NjgyMDQzLCJpYXQiOjE2NTcxNDYwNDMsImp0aSI6ImE4NmY5Y2E3LWYwN2YtNDU0My04OTc1LWQ5OGNiZjUwZDQzYiJ9.fTDLCUQYVYclFDOs4aW994lk40tv5AMwGYPnd5Z97GTbmBsyzCAEFV7OLRmqyA_NNosR7Kqs3HNpkidx2XUvW5wxLLlMVn9pu7WpF0kDKbg54Hbc0ne87_j9KD-zmkKKlaXilAKjnEC08vXL3yqRC_6OhjIHmGrVNeublHqIM4B1GQw_YRDd_bU3OLN_XHtoj5O4mtZDQ1rAleYmr-2hjuz5V4SR6CAQLvMDLfE9fQK-tv0XC_KaqKBeIJCMhpU9iDJDqP5gZWyOU_o4ocn9-1zXu2EF4iWbfhpB2HRCMxOYXmTSBKsoDWu-6bcBeYfliISgfmPAVZTYqoWGnJfMQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.94.122.8/xray/api/v1/configuration/workersCount",
+							"protocol": "http",
+							"host": [
+								"34",
+								"94",
+								"122",
+								"8"
+							],
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"configuration",
+								"workersCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/configuration/workersCount",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJTZTFyY3pyR29BYTVRcHVvN2FtZFVuQ0hNdkVrOGRPT21PYXNvZ016b0k0In0.eyJleHQiOiJ7XCJyZXZvY2FibGVcIjpcInRydWVcIn0iLCJzdWIiOiJqZmFjQDAxZzc4ZjFjczQ4dzh0MDF3YWY5dzAxMzlxXC91c2Vyc1wvYWRtaW4iLCJzY3AiOiJhcHBsaWVkLXBlcm1pc3Npb25zXC9hZG1pbiIsImF1ZCI6IipAKiIsImlzcyI6ImpmZmVAMDAwIiwiZXhwIjoxNjg4NjgyMDQzLCJpYXQiOjE2NTcxNDYwNDMsImp0aSI6ImE4NmY5Y2E3LWYwN2YtNDU0My04OTc1LWQ5OGNiZjUwZDQzYiJ9.fTDLCUQYVYclFDOs4aW994lk40tv5AMwGYPnd5Z97GTbmBsyzCAEFV7OLRmqyA_NNosR7Kqs3HNpkidx2XUvW5wxLLlMVn9pu7WpF0kDKbg54Hbc0ne87_j9KD-zmkKKlaXilAKjnEC08vXL3yqRC_6OhjIHmGrVNeublHqIM4B1GQw_YRDd_bU3OLN_XHtoj5O4mtZDQ1rAleYmr-2hjuz5V4SR6CAQLvMDLfE9fQK-tv0XC_KaqKBeIJCMhpU9iDJDqP5gZWyOU_o4ocn9-1zXu2EF4iWbfhpB2HRCMxOYXmTSBKsoDWu-6bcBeYfliISgfmPAVZTYqoWGnJfMQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"index\": {\n        \"new_content\": 8,\n        \"existing_content\": 4\n    },\n    \"persist\": {\n        \"new_content\": 8,\n        \"existing_content\": 4\n    },\n    \"analysis\": {\n        \"new_content\": 8,\n        \"existing_content\": 4\n    },\n    \"alert\": {\n        \"new_content\": 8,\n        \"existing_content\": 4\n    },\n    \"impact_analysis\": {\n        \"new_content\": 4\n    },\n    \"notification\": {\n        \"new_content\": 4\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://34.94.122.8/xray/api/v1/configuration/workersCount",
+							"protocol": "http",
+							"host": [
+								"34",
+								"94",
+								"122",
+								"8"
+							],
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"configuration",
+								"workersCount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/system/version",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ2ZXIiOiIyIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYiLCJraWQiOiJTZTFyY3pyR29BYTVRcHVvN2FtZFVuQ0hNdkVrOGRPT21PYXNvZ016b0k0In0.eyJleHQiOiJ7XCJyZXZvY2FibGVcIjpcInRydWVcIn0iLCJzdWIiOiJqZmFjQDAxZzc4ZjFjczQ4dzh0MDF3YWY5dzAxMzlxXC91c2Vyc1wvYWRtaW4iLCJzY3AiOiJhcHBsaWVkLXBlcm1pc3Npb25zXC9hZG1pbiIsImF1ZCI6IipAKiIsImlzcyI6ImpmZmVAMDAwIiwiZXhwIjoxNjg4NjgyMDQzLCJpYXQiOjE2NTcxNDYwNDMsImp0aSI6ImE4NmY5Y2E3LWYwN2YtNDU0My04OTc1LWQ5OGNiZjUwZDQzYiJ9.fTDLCUQYVYclFDOs4aW994lk40tv5AMwGYPnd5Z97GTbmBsyzCAEFV7OLRmqyA_NNosR7Kqs3HNpkidx2XUvW5wxLLlMVn9pu7WpF0kDKbg54Hbc0ne87_j9KD-zmkKKlaXilAKjnEC08vXL3yqRC_6OhjIHmGrVNeublHqIM4B1GQw_YRDd_bU3OLN_XHtoj5O4mtZDQ1rAleYmr-2hjuz5V4SR6CAQLvMDLfE9fQK-tv0XC_KaqKBeIJCMhpU9iDJDqP5gZWyOU_o4ocn9-1zXu2EF4iWbfhpB2HRCMxOYXmTSBKsoDWu-6bcBeYfliISgfmPAVZTYqoWGnJfMQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/system/version",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"system",
+								"version"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/repos_config/{name}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/repos_config/partner-integration-tests",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"repos_config",
+								"partner-integration-tests"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/repos_config",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"repo_name\": \"repo-config-test-repo\",\n\t\"repo_config\": {\n\t\t\"vuln_contextual_analysis\": true,\n\t\t\"retention_in_days\": 90,\n\t\t\"exposures\": {\n\t\t\t\"scanners_category\": {\n\t\t\t\t\"malicious_code_scan\": true,\n\t\t\t\t\"services_scan\": true,\n\t\t\t\t\"secrets_scan\": true,\n\t\t\t\t\"iac_scan\": true,\n\t\t\t\t\"applications_scan\": true\n\t\t\t}\n\t\t}\n\t}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/repos_config",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"repos_config"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/binMgr/builds",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"names\": [\"release-pipeline-4495148\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/binMgr/builds?projectKey=testproj5",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"binMgr",
+								"builds"
+							],
+							"query": [
+								{
+									"key": "projectKey",
+									"value": "testproj5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/binMgr/default/builds",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indexed_builds\": [\n        \"release-pipeline-4495148\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/binMgr/default/builds?projectKey=testproj5",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"binMgr",
+								"default",
+								"builds"
+							],
+							"query": [
+								{
+									"key": "projectKey",
+									"value": "testproj5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/binMgr/default/builds Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/binMgr/default/builds?projectKey=testproj5",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"binMgr",
+								"default",
+								"builds"
+							],
+							"query": [
+								{
+									"key": "projectKey",
+									"value": "testproj5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/monitor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/monitor",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"monitor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v2/ci/build/pipeline_dbp/9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v2/ci/build/pipeline_dbp/9?include_vulnerabilities=true",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v2",
+								"ci",
+								"build",
+								"pipeline_dbp",
+								"9"
+							],
+							"query": [
+								{
+									"key": "include_vulnerabilities",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/summary/artifact",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\" : [ \"default/docker-dev/dbp/9/\" ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/summary/artifact",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"summary",
+								"artifact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/api/v1/reports",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paths\": [\"projects/1/pipelines/171/runs/2922/steps/6617/6716.tar.gz\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/api/v1/reports?direction=asc&page_num=1&num_of_rows=20",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"api",
+								"v1",
+								"reports"
+							],
+							"query": [
+								{
+									"key": "direction",
+									"value": "asc"
+								},
+								{
+									"key": "page_num",
+									"value": "1"
+								},
+								{
+									"key": "num_of_rows",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "xray/ui/webhooks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Alex Test\",\n    \"description\": \"Test\",\n    \"url\": \"https://tempurl.org\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/xray/ui/webhooks",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"xray",
+								"ui",
+								"webhooks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pipelines",
+			"item": [
+				{
+					"name": "pipelines/api/v1/projectIntegrations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/pipelines/api/v1/projectIntegrations",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"pipelines",
+								"api",
+								"v1",
+								"projectIntegrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pipelines/api/v1/projectIntegrations",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"alex_test_integration\",\n    \"project\": {\n        \"name\": \"My Project\",\n        \"key\": \"myproj\"\n    },\n    \"masterIntegrationId\": 99,\n    \"masterIntegrationName\": \"generic\",\n    \"isInternal\": false,\n    \"formJSONValues\": [\n        {\n            \"label\": \"envs\",\n            \"value\": {\n                \"Fizz\": \"Buzz\",\n                \"Foo\": \"Bar\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/pipelines/api/v1/projectIntegrations",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"pipelines",
+								"api",
+								"v1",
+								"projectIntegrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pipelines/api/v1/projects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/pipelines/api/v1/projects?names=My%20Project",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"pipelines",
+								"api",
+								"v1",
+								"projects"
+							],
+							"query": [
+								{
+									"key": "names",
+									"value": "My%20Project"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pipelines/api/v1/masterIntegrations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/pipelines/api/v1/masterIntegrations",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"pipelines",
+								"api",
+								"v1",
+								"masterIntegrations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pipelines/api/v1/masterIntegrationFields",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{jpdHost}}:{{jpdPort}}/pipelines/api/v1/masterIntegrationFields",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"port": "{{jpdPort}}",
+							"path": [
+								"pipelines",
+								"api",
+								"v1",
+								"masterIntegrationFields"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lifecycle",
+			"item": [
+				{
+					"name": "lifecycle/api/v2/release_bundle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-JFrog-Signing-Key-Name",
+								"value": "slack_test",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"release_bundle_name\": \"Test-Bundle\",\n    \"release_bundle_version\": \"1.0.0\",\n    \"source_type\": \"artifacts\",\n    \"source\": {\n        \"artifacts\": [\n            {\n                \"path\": \"alexh-generic-local/module_test_2.zip\",\n                \"sha256\": \"adcd7bd95adb4d9b553fdfe74d0000bd6f61176ca12936dc8340f1981c3bbbcc\"\n            }\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{jpdHost}}/lifecycle/api/v2/release_bundle",
+							"host": [
+								"{{jpdHost}}"
+							],
+							"path": [
+								"lifecycle",
+								"api",
+								"v2",
+								"release_bundle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{jpdAuthToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

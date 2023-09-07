@@ -51,7 +51,6 @@ module "virtual" {
     repositories = [ "auth-npm-dev-local", "npm-remote"]
     default_deployment_repo = "auth-npm-dev-local"
   }
-
   payment-maven-dev-virtual = {
     key          = "payment-maven-dev-virtual"
     repositories = [

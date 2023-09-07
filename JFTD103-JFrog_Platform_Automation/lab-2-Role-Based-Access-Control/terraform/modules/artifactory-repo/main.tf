@@ -133,7 +133,7 @@ resource "artifactory_virtual_docker_repository" "this" {
   #  }
 }
 
-resource "auth-npm-dev-virtual" "this" {
+resource "artifactory_virtual_npm_repository" "this" {
   count                   = var.auth-npm-dev-virtual != null ? 1 : 0
   key                     = var.auth-npm-dev-virtual.key
   project_key             = var.auth-npm-dev-virtual.project_key
@@ -147,7 +147,7 @@ resource "auth-npm-dev-virtual" "this" {
   #  }
 }
 
-resource "payment-maven-dev-virtual" "this" {
+resource "artifactory_virtual_maven_repository" "this" {
   count                   = var.payment-maven-dev-virtual != null ? 1 : 0
   key                     = var.payment-maven-dev-virtual.key
   project_key             = var.payment-maven-dev-virtual.project_key
