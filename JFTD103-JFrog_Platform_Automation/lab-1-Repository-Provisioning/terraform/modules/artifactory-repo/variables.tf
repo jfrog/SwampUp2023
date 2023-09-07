@@ -5,7 +5,7 @@ variable "ACCESS_TOKEN" {
 
 variable "JFROG_URL" {
   type    = string
-  default = "https://lunchnlearn.jfrog.io/"
+  default = ""
 }
 
 
