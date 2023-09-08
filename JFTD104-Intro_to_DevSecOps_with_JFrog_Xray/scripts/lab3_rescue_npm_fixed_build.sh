@@ -15,6 +15,9 @@ jf config use $CLI_INSTANCE_ID
 
 cd ../lab-3/project-examples/npm-fixed-example
 
+rm -r node_modules
+rm package-lock.json
+
 echo "Jfrog is accessible check : "
 jf rt ping
 
@@ -39,7 +42,7 @@ jf rt bce swampup23_jftd104_npm_pipeline $BUILD_NUMBER
 
 #Collect GIT Variables
 
-#jf rt bag swampup23_jftd104_npm_pipeline $BUILD_NUMBER ../../.
+jf rt bag swampup23_jftd104_npm_pipeline $BUILD_NUMBER
 
 #Publish Build Info
 

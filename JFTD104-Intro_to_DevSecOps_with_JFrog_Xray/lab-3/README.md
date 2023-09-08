@@ -24,7 +24,6 @@ JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 #### NPM - Package Manager Integration
 - `cd JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
-
   - Run 
   ```
   jf npmc --repo-resolve jftd104-npm-virtual --repo-deploy jftd104-npm-virtual 
