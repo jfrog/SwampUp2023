@@ -28,6 +28,7 @@ jf rt bpr auth-npm 2.0.0 auth-npm-qa-local --status='QA candidate' --comment='we
 jf rt sp "payment-maven-qa-local/org/jfrog/test/" "unit.test=pass;integration.test=null;"
 jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=null;"
 
+cd ../../
 
 jf rbc --builds=rbv2-npm.json --signing-key=mykey auth-npm 2.0.0
 jf rbc --builds=rbv2-maven.json --signing-key=mykey payment-maven 2.0.0
