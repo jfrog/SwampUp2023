@@ -26,4 +26,8 @@ jf rt bpr payment-maven 2.0.0 payment-maven-qa-local --status='QA candidate' --c
 jf rt bpr auth-npm 2.0.0 auth-npm-qa-local --status='QA candidate' --comment='webservice is now QA candidate and hand over for regression test' --copy=true --props="maintainer=maharship;stage=qa"
 
 jf rt sp "payment-maven-qa-local/org/jfrog/test/" "unit.test=pass;integration.test=null;"
-jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.5.tgz" "unit.test=pass;integration.test=null;"
+jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=null;"
+
+
+jf rbc --builds=rbv2-npm.json --signing-key=mykey auth-npm 2.0.0
+jf rbc --builds=rbv2-maven.json --signing-key=mykey payment-maven 2.0.0

@@ -1,4 +1,4 @@
-# switch to SUP016-edge config
+# switch to swampupedge config
 jf c use swampupedge
 
 # creating repos on edge nodes

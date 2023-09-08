@@ -118,7 +118,7 @@
 <br />
 
 
-## RUN SCRIPT - Prerequisites for future labs that CREATES ALL REPOSITORIES
+## RUN SCRIPT - Prerequisites for future labs that CREATES ALL REPOSITORIES [MUST]
 - Run `sh lab_1_rescue.sh` and it will create all local, remote, virtual repositories.
 
 <br />
