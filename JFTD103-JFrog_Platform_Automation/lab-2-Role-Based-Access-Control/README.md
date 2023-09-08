@@ -61,7 +61,7 @@
       Insert the section's repositories value. <br/>
       You can specify the name "ANY" to apply to all repositories, "ANY REMOTE" for all remote repositories or "ANY LOCAL" for all local repositories:
 
-        - The value should be a comma separated list > `sup016-docker-dev-local,sup016-maven-dev-local,sup016-npm-dev-local`
+        - The value should be a comma separated list > `ANY`
         - Insert a value for include-patterns: ↵
         - The value should be a comma separated list (press enter for default) [**]: ↵
         - Insert value for exclude-patterns: ↵
@@ -133,6 +133,13 @@
 <br />
 <br />
 
+## JFrog Project
+- JFrog Projects is a management entity for hosting your resources (repositories, builds, Release Bundles, and Pipelines), and for associating users/groups as members with specific entitlements. 
+- As such, using projects helps Platform Admins to offload part of their day-to-day management effort and to generate a better separation between the customer products to improve customer visibility on efficiency, scale, cost, and security. 
+- Projects simplifies the onboarding process for new users, and create better visibility for LOBs and project stakeholders.
+- Review and RUN `sh project.sh`
+
 ## CHALLENGE - RBAC [Optional]
 - Remove `deleteme` users from artifactory
 - Update ``development`` permission target and give ``ops`` group ``managedXrayMeta`` permission
+- Use JFrog [Project Terraform provider](https://registry.terraform.io/providers/jfrog/project/latest)
