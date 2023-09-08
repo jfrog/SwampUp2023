@@ -310,8 +310,21 @@
 <br/>
 <br/>
 
-# CURATION 
-- ToDo
+# CURATION
+- JFrog [Curation](https://jfrog.com/help/r/jfrog-curation/jfrog-curation-overview) addresses the threat of software supply chain attacks by enabling organizations to ensure packages are vetted before they are included in their software.
+- These rules prevent packages with potential security or licensing problems from being downloaded from a public repository to your remote repository.
+- [JFrog CLI for Curation](https://jfrog.com/help/r/jfrog-curation/jfrog-curation-overview)
+  - ``jf curation-audit``
+- First let go to ``Platform Configuration`` in UI.
+- Navigate to Curation in left NavBar
+- Click on `Curated Repositories` and flip the toggle
+- Lets create Curation Policy and `GPL Block`
+  - `Repositories` -> All Curated
+  - `Policy Condition` -> Package license GNU GPL
+  - `Waivers` -> Next
+  - `Actions & Notifications` -> Block
+- Now lets go to `JFTD103-JFrog_Platform_Automation/lab-5-JFrog-Security/example/npm-example`
+  - RUN `npm install extjs-gpl@6.2.0`
 
 <br/>
 <br/>
