@@ -8,17 +8,12 @@
               "$or": [
                 {
                   "repo": {
-                    "$eq": "auth-npm-dev-local"
+                    "$eq": "auth-npm-prod-local"
                   }
                 },
                 {
                   "repo": {
-                    "$eq": "finapp-docker-dev-local"
-                  }
-                },
-                {
-                  "repo": {
-                    "$eq": "payment-maven-dev-local"
+                    "$eq": "payment-maven-prod-local"
                   }
                 }
               ]
@@ -26,20 +21,16 @@
             {
               "$or": [
                 {
-                  "$and": [
-                    {
-                      "@unit.test": "pass"
-                    },
-                    {
-                      "@integration.test": "pass"
-                    },
-                    {
-                      "@release.version": "2.0.0"
-                    },
-                    {
-                      "@qa.code.quality.new_bugs": "0"
-                    }
-                  ]
+                  "@unit.test": "pass"
+                },
+                {
+                  "@integration.test": "pass"
+                },
+                {
+                  "@release.version": "2.0.0"
+                },
+                {
+                  "@qa.code.quality.new_bugs": "0"
                 }
               ]
             }

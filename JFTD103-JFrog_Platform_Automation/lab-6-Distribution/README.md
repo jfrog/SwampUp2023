@@ -16,7 +16,7 @@
 
 ### DISTRIBUTE RELEASE BUNDLE
 - Run ``jf ds rbd --dist-rules=dist-rules.json rb_swamp 1.0.0``
-    - we need to update ``dist-rules.json`` with our own edge. Example `swampupedge`
+    - Note: We need to update ``dist-rules.json`` with the site name of the actual edge instance before running above command.
 
 
 ### CHALLENGE - Release Bundle [Optional]
