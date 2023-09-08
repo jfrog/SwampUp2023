@@ -1,6 +1,20 @@
 .DS_Store
 .idea
 
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/scripts/.jfrog
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-vulnerable-example/.idea
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-vulnerable-example/.jfrog
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-vulnerable-example/target
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-fixed-example/.jfrog
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-fixed-example/target
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example/.jfrog
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example/node_modules
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example/package-lock.json
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-fixed-example/.jfrog
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-fixed-example/node_modules
+JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-fixed-example/package-lock.json
+
+
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/.jfrog
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/.jfrog_vscode
 JFTD103-JFrog_Platform_Automation/lab-3-Build-and-Replication/example/maven-example/target

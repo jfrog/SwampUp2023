@@ -15,40 +15,21 @@
 JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 - `cd JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/maven-vulnerable-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
-  - Run ``jf mvnc``
-    - Resolve dependencies from Artifactory? (y/n) [y]? `y`
-    - Set Artifactory server ID [swampup2023]: ↵
-    - Set resolution repository for release dependencies (press Tab for options): `jftd104-libs-release-virtual`
-    - Set resolution repository for snapshot dependencies (press Tab for options): `jftd104-libs-snapshot-virtual`
-    - Deploy project artifacts to Artifactory? (y/n) [y]? `y`
-    - Set Artifactory server ID [swampup2023]: ↵
-    - Set repository for release artifacts deployment (press Tab for options): `jftd104-libs-release-virtual`
-    - Set repository for snapshot artifacts deployment (press Tab for options): `jftd104-libs-snapshot-virtual`
-    - Would you like to filter out some of the deployed artifacts? (y/n) [n]? `n`
-- Run ``jf mvn clean install -f ./pom.xml -Dmaven.test.skip=true -Dartifactory.publish.artifacts=true --build-name swampup23_jftd104_mvn_pipeline --build-number 1.0.0``
-
-NOTE : We can also ``jf mvnc`` without interactive interface 
+  - Run 
   ```
   jf mvnc --repo-resolve-snapshots jftd104-libs-snapshot-virtual --repo-resolve-releases jftd104-libs-release-virtual --repo-deploy-snapshots jftd104-libs-snapshot-virtual --repo-deploy-releases jftd104-libs-release-virtual
   ```
+- Run ``jf mvn clean install -f ./pom.xml -Dmaven.test.skip=true -Dartifactory.publish.artifacts=true --build-name swampup23_jftd104_mvn_pipeline --build-number 1.0.0``
 
 #### NPM - Package Manager Integration
 - `cd JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
-  - Run ``jf npmc``
-  - Resolve dependencies from Artifactory? (y/n) [y]? `y`
-  - Set Artifactory server ID [swampup2023]: ↵
-  - Set repository for dependencies resolution (press Tab for options): `jftd104-npm-virtual`
-  - Deploy project artifacts to Artifactory? (y/n) [y]? `y`
-  - Set Artifactory server ID [swampup2023]: ↵
-  - Set repository for artifacts deployment (press Tab for options): `jftd104-npm-virtual`
-- Run ``jf npm install --build-name swampup23_jftd104_npm_pipeline --build-number 1.0.0``
-- Run ``jf npm publish --build-name swampup23_jftd104_npm_pipeline --build-number 1.0.0`` - Publish build Artifact to repository
-
-NOTE : We can also ``jf npmc`` without interactive interface
+  - Run 
   ```
   jf npmc --repo-resolve jftd104-npm-virtual --repo-deploy jftd104-npm-virtual 
   ```
+- Run ``jf npm install --build-name swampup23_jftd104_npm_pipeline --build-number 1.0.0``
+- Run ``jf npm publish --build-name swampup23_jftd104_npm_pipeline --build-number 1.0.0`` - Publish build Artifact to repository
 
 <br />
 <br />

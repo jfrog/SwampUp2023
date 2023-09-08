@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "swampup23_jftd104_mvn_pipeline",
-  "number" : "2.0.0",
+  "number" : "11726",
   "buildAgent" : {
     "name" : "Maven",
     "version" : "3.9.4"
@@ -10,8 +10,8 @@
     "name" : "/",
     "version" : "3.9.4"
   },
-  "started" : "2023-08-31T12:49:56.258-0500",
-  "durationMillis" : 749,
+  "started" : "2023-09-07T18:53:03.038-0500",
+  "durationMillis" : 738,
   "vcs" : [ ],
   "modules" : [ {
     "properties" : {
@@ -23,9 +23,9 @@
     "repository" : "jftd104-libs-release-virtual",
     "artifacts" : [ {
       "type" : "jar",
-      "sha1" : "e230b1071260a274e7b2e06393ebb93991920aeb",
-      "sha256" : "8fddcda5b7f5194c3c1b0085477a5507abe38411b4f9c75163644e4fefa4c9f0",
-      "md5" : "b604835bafbe540f58e9f0a0556363d2",
+      "sha1" : "3676ade77e65c0b587ad0244c49df1600edcdf37",
+      "sha256" : "ac0c6601f416490becaaca8372fe7ff1bb1452823a95f5bde430c6c98fb0147f",
+      "md5" : "183072e009701671962e8c605a294c6a",
       "name" : "maven-vulnerable-project-1.0.jar",
       "path" : "swampup-devsecops-2023/maven-vulnerable-project/1.0/maven-vulnerable-project-1.0.jar"
     }, {
@@ -46,20 +46,44 @@
       "requestedBy" : [ [ "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
     }, {
       "type" : "jar",
-      "sha1" : "298ef93114b190b3db00a115d2d947bb61734a2a",
-      "sha256" : "8be89ecdf0c31b56b1f073dd26d1adc3d4b65b9d8dd114158943d33917306977",
-      "md5" : "b7a1b6a86fe2542b58735c641d0023d6",
+      "sha1" : "a22ac51016944b06fd9ffbc9541c6e7ce5eea117",
+      "sha256" : "a2bebaa325ad25455b02149c67e6052367a7d7fc1ce77de000eed284a5214eac",
+      "md5" : "ec59f24f7f8d9acf53301c562722adf2",
+      "id" : "com.fasterxml.jackson.core:jackson-core:2.9.5",
+      "scopes" : [ "compile" ],
+      "requestedBy" : [ [ "com.fasterxml.jackson.core:jackson-databind:2.9.5", "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
+    }, {
+      "type" : "jar",
+      "sha1" : "07c10d545325e3a6e72e06381afe469fd40eb701",
+      "sha256" : "45d32ac61ef8a744b464c54c2b3414be571016dd46bfc2bec226761cf7ae457a",
+      "md5" : "c09faa1b063681cf45706c6df50685b6",
+      "id" : "com.fasterxml.jackson.core:jackson-annotations:2.9.0",
+      "scopes" : [ "compile" ],
+      "requestedBy" : [ [ "com.fasterxml.jackson.core:jackson-databind:2.9.5", "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
+    }, {
+      "type" : "jar",
+      "sha1" : "9141212b8507ab50a45525b545b39d224614528b",
+      "sha256" : "ade7402a70667a727635d5c4c29495f4ff96f061f12539763f6f123973b465b0",
+      "md5" : "948dda787593340a7af1a18e328b7b7f",
       "id" : "org.apache.logging.log4j:log4j-core:2.14.1",
       "scopes" : [ "compile" ],
       "requestedBy" : [ [ "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
     }, {
       "type" : "jar",
-      "sha1" : "298ef93114b190b3db00a115d2d947bb61734a2a",
-      "sha256" : "8be89ecdf0c31b56b1f073dd26d1adc3d4b65b9d8dd114158943d33917306977",
-      "md5" : "b7a1b6a86fe2542b58735c641d0023d6",
+      "sha1" : "3490508379d065fe3fcb80042b62f630f7588606",
+      "sha256" : "0fb4e079c118e752cc94c15ad22e6782b0dfc5dc09145f4813fb39d82e686047",
+      "md5" : "34b37affbf74f5d199be10622ddc83cd",
       "id" : "com.fasterxml.jackson.core:jackson-databind:2.9.5",
       "scopes" : [ "compile" ],
       "requestedBy" : [ [ "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
+    }, {
+      "type" : "jar",
+      "sha1" : "cd8858fbbde69f46bce8db1152c18a43328aae78",
+      "sha256" : "8caf58db006c609949a0068110395a33067a2bad707c3da35e959c0473f9a916",
+      "md5" : "6f31a3b90c3eb09fb0dc0aef155a001c",
+      "id" : "org.apache.logging.log4j:log4j-api:2.14.1",
+      "scopes" : [ "compile" ],
+      "requestedBy" : [ [ "org.apache.logging.log4j:log4j-core:2.14.1", "swampup-devsecops-2023:maven-vulnerable-project:1.0" ] ]
     } ]
   } ]
 }
