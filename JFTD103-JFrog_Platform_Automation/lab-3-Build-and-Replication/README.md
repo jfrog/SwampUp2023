@@ -235,11 +235,13 @@ NOTE: [Command Options](https://www.jfrog.com/confluence/display/CLI/CLI+for+JFr
   ``jf rt rplc template-pull.json --vars "url=https://lunchnlearn.jfrog.io/artifactory/docker-main/"``
 
 <br />
+<br />
 
-**Blog**
+## **Blog**
 [Replication: Using Artifactory to Manage Binaries Across Multi-Site Topologies](https://jfrog.com/whitepaper/replication-using-artifactory-to-manage-binaries-across-multi-site-topologies/)
 
-
+<br />
+<br />
 
 ## RUN SCRIPT
 - Run ``sh lab_3_replication_rescue_optional.sh``
