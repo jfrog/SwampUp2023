@@ -14,3 +14,6 @@ jf rt group-add-users secops "irene,matt,jennifer"
 # Create Permission Target
 jf rt permission-target-create dev-permission-target-template.json
 jf rt permission-target-create prod-permission-target-template.json
+
+# JFROG Project
+sh project.sh
