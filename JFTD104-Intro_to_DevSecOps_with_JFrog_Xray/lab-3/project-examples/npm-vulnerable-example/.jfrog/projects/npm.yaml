@@ -1,8 +1,0 @@
-version: 1
-type: npm
-resolver:
-    repo: jftd104-npm-virtual
-    serverId: swampup2023
-deployer:
-    repo: jftd104-npm-virtual
-    serverId: swampup2023
