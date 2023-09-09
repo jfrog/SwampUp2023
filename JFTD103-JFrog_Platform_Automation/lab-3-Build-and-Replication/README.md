@@ -9,7 +9,7 @@
 - One of the Package Manager Integration we can use
 
 #### MAVEN - Package Manager Integration
-- `cd lab-3-Build-and-Replicate/example-project/maven-example`
+- `cd lab-3-Build-and-Replicate/example/maven-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
     - Run ``jf mvnc``
         - Resolve dependencies from Artifactory? (y/n) [y]? `y`
