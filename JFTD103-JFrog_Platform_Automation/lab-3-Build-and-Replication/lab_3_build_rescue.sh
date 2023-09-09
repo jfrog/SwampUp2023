@@ -33,8 +33,8 @@ jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pas
 jf rt bpr payment-maven 2.0.0 payment-maven-prod-local --status='Prod candidate' --comment='webservice is now prod ready' --copy=true --props="maintainer=maharship;stage=prod"
 jf rt bpr auth-npm 2.0.0 auth-npm-prod-local --status='Prod candidate' --comment='webservice is now prod ready' --copy=true --props="maintainer=maharship;stage=prod"
 
-jf rt sp "payment-maven-qa-local/org/jfrog/test/" "unit.test=pass;integration.test=pass;"
-jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=pass;"
+jf rt sp "payment-maven-prod-local/org/jfrog/test/" "unit.test=pass;integration.test=pass;release.version=2.0.0"
+jf rt sp "auth-npm-prod-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=pass;release.version=2.0.0"
 
 cd ../../
 
