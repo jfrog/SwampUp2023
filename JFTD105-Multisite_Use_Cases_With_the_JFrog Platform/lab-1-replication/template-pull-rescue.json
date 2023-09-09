@@ -1,0 +1,11 @@
+{
+  "url":"https:///$JFROG_PLATFORM/${source-repo-name}",
+  "username":"<userid>",
+  "password":"<pwd>",
+  "key": "${repo-name}",
+  "packageType": "${package-type}",
+  "rclass": "${repo-type}",
+  "repoLayoutRef": "${repo-layout}",
+  "environments":"${env}",
+  "xrayIndex": "${xray-enable}"
+}
