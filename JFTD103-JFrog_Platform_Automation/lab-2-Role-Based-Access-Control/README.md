@@ -133,11 +133,13 @@
 <br />
 <br />
 
-## JFrog Project
-- JFrog Projects is a management entity for hosting your resources (repositories, builds, Release Bundles, and Pipelines), and for associating users/groups as members with specific entitlements. 
+# JFrog Project
+- JFrog [Projects](https://jfrog.com/help/r/jfrog-platform-administration-documentation/projects) is a management entity for hosting your resources (repositories, builds, Release Bundles, and Pipelines), and for associating users/groups as members with specific entitlements. 
 - As such, using projects helps Platform Admins to offload part of their day-to-day management effort and to generate a better separation between the customer products to improve customer visibility on efficiency, scale, cost, and security. 
 - Projects simplifies the onboarding process for new users, and create better visibility for LOBs and project stakeholders.
 - Review and RUN `sh project.sh`
+  - [REST APIs](https://jfrog.com/help/r/jfrog-rest-apis/projects?tocId=EdXas7XMSjSwMAunjWXA7w)
+  - [Project Terraform Provider](https://registry.terraform.io/providers/jfrog/project/latest)
 
 ## CHALLENGE - RBAC [Optional]
 - Remove `deleteme` users from artifactory

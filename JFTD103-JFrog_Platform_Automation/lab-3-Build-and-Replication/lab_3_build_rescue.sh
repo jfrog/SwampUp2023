@@ -3,7 +3,7 @@ cd ./example/maven-example
 jf mvnc --server-id-resolve swampup --server-id-deploy swampup --repo-resolve-releases payment-maven-dev-virtual --repo-resolve-snapshots payment-maven-dev-virtual --repo-deploy-releases payment-maven-dev-virtual --repo-deploy-snapshots payment-maven-dev-virtual
 
 # Build Maven Project
-jf mvn clean install -f pom.xml --build-name payment-maven --build-number 2.0.0
+jf mvn clean install -f pom.xml -Dmaven.test.skip=true -Dartifactory.publish.artifacts=true --build-name payment-maven --build-number 2.0.0
 
 jf rt bce payment-maven 2.0.0
 jf rt bag payment-maven 2.0.0
@@ -16,10 +16,10 @@ jf npmc --server-id-resolve swampup --server-id-deploy swampup --repo-resolve au
 
 # Build NPM Project
 jf npm install --build-name auth-npm --build-number 2.0.0
-jf npm publish --build-name auth-npm --build-number 2.0.0
 
 jf rt bce auth-npm 2.0.0
 jf rt bag auth-npm 2.0.0
+jf npm publish --build-name auth-npm --build-number 2.0.0
 jf rt bp auth-npm 2.0.0
 
 # Build promotion to QA for integration tests.

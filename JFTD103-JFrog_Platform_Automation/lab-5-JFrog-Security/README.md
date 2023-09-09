@@ -209,7 +209,7 @@
     - Run ad-hoc scans for security purposes **without uploading to Artficatory first**.
     - Adhere to organizational standards, whereas binaries and builds need to be **approved** first before uploading to Artifactory.
     - Not all binaries are stored in Artifactory, and as a user, you want to use Xray scanning capabilities.
-- Navigate to either `npm-example` or `maven-example` project from `example`
+- Navigate to `JFTD103-JFrog_Platform_Automation/lab-4-AQL/sample-data` and use either `npm` or `maven` project which has `.jar` or `.tgz`
 - Run `jf scan` or `jf s`
     - sample (maven or npm) files are located under `JFTD103-JFrog_Platform_Automation/lab-4-AQL/sample-data/`
 - For Docker, Run `jf docker scan` (NOTE: we can also pass additional command like `--watches`, `--project`, `--repo-path`, etc)
@@ -237,15 +237,17 @@
     - Supported Packages : Maven, NPM, Pip, Pipenv, Go, Yarn
     - [Here](https://github.com/jfrog/frogbot/tree/master/docs/templates) are the sample templates to open pull request based on scan for fix
 - Install [Frogbot](https://github.com/jfrog/frogbot/tree/master/docs) to your repositories
-- Fork github project [npm-example-swampup](https://github.com/MaharshiPatel/npm-example-swampup) and clone on your machine
-    - navigate to file `.github/workflows/frogbot-scan-pr.yml`
-        - We need to add repository secrets in Github (#2 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
-            - `JF_URL` (line 41)
-            - `JF_USER`  (line 45)
-            - `JF_PASSWORD` (line 49)
-            - `JF_GIT_TOKEN` (line 53)
-        - Check the allow GitHub Actions to create and approve pull requests check box (#3 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
-        - Create a Github Environment called `frogbot` (#4 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
+- Fork github project either
+  - [python-catalog](https://github.com/MaharshiPatel/python-catalog) and clone on your machine
+  - [npm-example-swampup](https://github.com/MaharshiPatel/npm-example-swampup) and clone on your machine
+
+  - navigate to file `.github/workflows/`
+      - We need to add repository secrets in Github (#2 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
+          - `JF_URL` 
+          - `JF_USER` & `JF_PASSWORD` or `JF_ACCESS_TOKEN`
+          - `JF_GIT_TOKEN` (line 53)
+      - Check the allow GitHub Actions to create and approve pull requests check box (#3 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
+      - Create a Github Environment called `frogbot` (#4 in [document](https://github.com/jfrog/frogbot#%EF%B8%8F-installing-and-using-frogbot))
 - Fork github project [frogbot_demo_pypi](https://github.com/MaharshiPatel/frogbot_demo_pypi) and clone on your machine
 
 <br/>
@@ -264,11 +266,22 @@
   - Undetermined - inconclusive: Xray was unable to determine if the vulnerability is applicable or not. 
   - Undetermined - no scanner: An applicability scanner for this vulnerability is not available.
 
+- Navigate to either of `npm` or `maven` project under `example` in IDE or terminal
+  - In IDE, navigate to JFrog Extension and run scan
+  - In terminal, run `jf audit`
+
+<br/>
+<br/>
 <br/>
 
 ## Secrets Detection
 - Detects any secret left exposed in the artifacts stored in Artifactory to stop any accidental leak of internal tokens, credentials, or use of expired certificates.
-
+- Navigate to either of `npm` or `maven` project under `example` in IDE or terminal
+  - In IDE, navigate to JFrog Extension and run scan
+  - In terminal, run `jf audit`
+  
+<br/>
+<br/>
 <br/>
 
 ## Application Libraries Misuse
@@ -279,7 +292,14 @@
   - Use of weak crypto keys 
   - Throttle logins to prevent brute-force attacks (Throttle Node.js logins to prevent brute-force attacks)
   - Invoking Node.js exec functionality with user-provided input
+- Navigate to either of `npm` project under `example` in IDE or terminal
+- Run `docker login -u${{USER}} ${{JPD_HOST}}` <- Command can be copied from UI -> `Artifactory` -> `Repositories` or `Artifacts` -> select `finapp-docker-dev-virtual` -> `**Set Me Up**`
+- Run `docker build . -t finapp-docker:1.0 --secret id=npmrc,src=$HOME/.npmrc`
+- Run `docker tag finapp-docker:1.0 ${{JPD_HOST}}/finapp-docker-dev-virtual/finapp-docker:1.0`
+- Run `docker push ${{JPD_HOST}}/finapp-docker-dev-virtual/finapp-docker:1.0`
 
+<br/>
+<br/>
 <br/>
 
 ## Services Configuration Security
@@ -293,7 +313,7 @@
 
 <br/>
 
-## IaC Security Analysis
+## IaC Security Analysis [MUST - Post Session]
 - Scans IaC files stored in Artifactory for early detection of cloud and infrastructure misconfigurations to prevent attacks and data leak.
 - Examples
   - Insufficient access restrictions to services (public access to repositories, publicly accessible clusters, globally readable/deletable/writeable buckets, use of admin roles in ECS services, IAM users with privileged access to all resources, enforce authorization for all API Gateway methods)
