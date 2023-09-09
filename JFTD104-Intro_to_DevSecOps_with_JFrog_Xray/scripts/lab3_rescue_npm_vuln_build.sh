@@ -15,6 +15,9 @@ jf config use $CLI_INSTANCE_ID
 
 cd ../lab-3/project-examples/npm-vulnerable-example
 
+rm -r node_modules
+rm package-lock.json
+
 echo "Jfrog is accessible check : "
 jf rt ping
 
