@@ -1,0 +1,11 @@
+{
+    "key":"jftd105lab1-maven-remote",
+    "packageType":"maven",
+    "rclass":"remote",
+    "url":"https://{SwampUp JPD host}/artifactory/jftd105lab1-mvn-dev-local",
+    "username":"admin",
+    "password":"JFr0g0601",
+    "repoLayoutRef":"maven-2-default",
+    "environments":"DEV",
+    "xrayIndex":"true"
+}

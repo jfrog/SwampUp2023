@@ -1,0 +1,12 @@
+[
+  {
+    "sourcekey":"jftd105lab1-maven-dev-local-for-pull",
+    "targetkey":"jftd105lab1-maven-remote",
+    "packageType":"maven",
+    "sourcerclass":"local",
+    "targetrclass":"remote",
+    "repoLayoutRef":"simple-default",
+    "environments":"DEV",
+    "xrayIndex":"true"
+  }
+]
