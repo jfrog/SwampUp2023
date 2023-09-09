@@ -7,7 +7,8 @@
       "name":"critical",
       "priority":1,
       "criteria":{
-        "min_severity":"critical"
+        "min_severity":"critical",
+        "applicable_cves_only": false
       },
       "actions":{
         "webhooks": [],
