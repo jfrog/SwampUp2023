@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "npm build",
+    "build": "npm build ./",
     "clean": "rm -rf node_modules",
     "rebuild": "npm run clean && npm install && npm run build"
   },

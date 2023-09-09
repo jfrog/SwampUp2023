@@ -9,7 +9,7 @@
 - One of the Package Manager Integration we can use
 
 #### MAVEN - Package Manager Integration
-- `cd lab-3-Build-and-Replicate/example/maven-example`
+- `cd lab-3-Build-and-Replication/example/maven-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
     - Run ``jf mvnc``
         - Resolve dependencies from Artifactory? (y/n) [y]? `y`
@@ -21,10 +21,10 @@
         - Set repository for release artifacts deployment (press Tab for options): `payment-maven-dev-virtual`
         - Set repository for snapshot artifacts deployment (press Tab for options): `payment-maven-dev-virtual`
         - Would you like to filter out some of the deployed artifacts? (y/n) [n]? `n`
-- Run ``jf mvn clean install -f ./pom.xml --build-name payment-maven --build-number 1.0.0``
+- Run ``jf mvn clean install -f ./pom.xml -Dmaven.test.skip=true -Dartifactory.publish.artifacts=true --build-name payment-maven --build-number 1.0.0``
 
 #### NPM - Package Manager Integration
-- `cd lab-3-Build-and-Replicate/example-project/npm-example`
+- `cd lab-3-Build-and-Replication/example-project/npm-example`
 - To pre-configured with the Artifactory server, repositories and use for building and publishing. The configuration is stored by the command in the .jfrog directory at the root directory of the project.)
     - Run ``jf npmc``
     - Resolve dependencies from Artifactory? (y/n) [y]? `y`
@@ -34,9 +34,6 @@
     - Set Artifactory server ID [swampup]: ↵
     - Set repository for artifacts deployment (press Tab for options): `auth-npm-dev-virtual`
 - Run ``jf npm install --build-name auth-npm --build-number 1.0.0``
-- To Publish build Artifact to repository
-  - Run ``jf npm publish --build-name auth-npm --build-number 1.0.0`` 
-
 
 <br />
 <br />
@@ -74,6 +71,13 @@
 <br />
 <br />
 
+## PUBLISH ARTIFACT 
+#### NPM publish
+- To Publish build Artifact to repository
+  - Run ``jf npm publish --build-name auth-npm --build-number 1.0.0``
+
+<br />
+<br />
 
 ## PUBLISH BUILD-INFO
 #### Maven publish build-info
