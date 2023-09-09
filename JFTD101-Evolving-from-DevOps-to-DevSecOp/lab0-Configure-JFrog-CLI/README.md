@@ -9,7 +9,7 @@
 ### Configuration with JFrog instance
   * Add a config - `jf config add`
   * Choose a server ID: {unique name} Ex: `swampup`
-  * JFrog platform url: `{your Jfrog instance url}` Ex: https://abc.jfrog.io
+  * JFrog platform url: `{your Jfrog instance url}` Ex: https://southbay.jfrog.io
   * JFrog access token (Leave blank for username and password/API key): `{access token}`
   * To create an access token, navigate on the UI to Administration > User management > Access Tokens > Generate token
     <br/> or
