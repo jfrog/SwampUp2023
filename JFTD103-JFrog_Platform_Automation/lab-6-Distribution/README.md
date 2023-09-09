@@ -5,8 +5,8 @@
 - Lab-1 - Repository Provisioning
 - Lab-2 - Role-Based Access Control
 - Lab-3 - Build Integration and Properties
-- Lab 5 - Artifactory Query Language
-- Lab 6 - JFrog Security
+- Lab 4 - Artifactory Query Language
+- Lab 5 - JFrog Security
 
 ### CREATE RELEASE BUNDLE
 - Run ``jf ds rbc --spec=rb-spec.json rb_swamp 1.0.0 --desc="release candidate"``
