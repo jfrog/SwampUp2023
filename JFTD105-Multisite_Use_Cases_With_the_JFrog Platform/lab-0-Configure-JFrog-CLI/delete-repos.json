@@ -1,0 +1,8 @@
+[
+  {"key":"jftd105lab1-docker-prod-local"},
+  {"key":"jftd105lab1-maven-prod-local"},
+  {"key":"jftd105lab1-npm-prod-local"},
+  {"key":"jftd105lab1-docker-remote"},
+  {"key":"jftd105lab1-maven-remote"},
+  {"key":"jftd105lab1-npm-remote"}
+]

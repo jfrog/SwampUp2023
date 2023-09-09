@@ -1,0 +1,5 @@
+[
+  {"key":"jftd105lab1-docker-remote","packageType":"docker","rclass":"remote","url":"https://registry-1.docker.io/","repoLayoutRef":"simple-default","environments":"PROD", "xrayIndex":"false"},
+  {"key":"jftd105lab1-maven-remote","packageType":"maven","rclass":"remote","url":"https://repo.maven.apache.org/maven2/","repoLayoutRef":"maven-2-default", "environments":"PROD","xrayIndex":"false"},
+  {"key":"jftd105lab1-npm-remote","packageType":"npm","rclass":"remote","url":"https://registry.npmjs.org","repoLayoutRef":"npm-default","environments":"PROD", "xrayIndex":"false"}
+]

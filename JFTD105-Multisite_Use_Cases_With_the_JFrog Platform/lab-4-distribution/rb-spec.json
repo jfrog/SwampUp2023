@@ -1,0 +1,43 @@
+{
+  "files": [
+    {
+      "aql": {
+        "items.find": {
+          "$and": [
+            {
+              "$or": [
+                {
+                  "repo": {
+                    "$eq": "auth-npm-qa-local"
+                  }
+                },
+                {
+                  "repo": {
+                    "$eq": "finapp-docker-qa-local"
+                  }
+                },
+                {
+                  "repo": {
+                    "$eq": "payment-maven-qa-local"
+                  }
+                }
+              ]
+            },
+            {
+              "$or": [
+                {
+                  "$and": [
+                    {
+                      "@unit.test": "pass"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+

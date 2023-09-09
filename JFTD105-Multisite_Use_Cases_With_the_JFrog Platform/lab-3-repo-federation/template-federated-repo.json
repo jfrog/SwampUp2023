@@ -1,0 +1,19 @@
+{
+  "key": "jftd105lab3-maven-dev-local",
+  "rclass": "federated",
+  "packageType": "maven",
+  "members": [
+    {
+      "url": "https://sup23sjom106.jfrog.io/artifactory/jftd105lab3-maven-dev-local",
+      "enabled": true
+    },
+    {
+      "url": "https://sup23sjoe106.jfrog.io/artifactory/jftd105lab3-maven-dev-local",
+      "enabled": true
+    },
+    {
+      "url": "https://sup23sjos106.jfrog.io/artifactory/jftd105lab3-maven-dev-local",
+      "enabled": true
+    }
+  ]
+}
