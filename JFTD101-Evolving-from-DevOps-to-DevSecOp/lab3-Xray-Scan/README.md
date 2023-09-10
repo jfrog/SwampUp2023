@@ -61,7 +61,8 @@
     - You can capture the output of the jf command, including any error messages or codes it produces, and then 
       process that output in a script. 
       - Here's how you might do it using Bash scripting as an example:
-      Note: The 2>&1 syntax redirects the standard error stream to the standard output stream so that both streams are captured in the output variable.
+        <br/> Note: The 2>&1 syntax redirects the standard error stream to the standard output stream so that both 
+        streams are captured in the output variable.
 ```text
 output=$(jf bs npm_build 03 --extended-table=true --fail=true 2>&1)
 error_code=$?
