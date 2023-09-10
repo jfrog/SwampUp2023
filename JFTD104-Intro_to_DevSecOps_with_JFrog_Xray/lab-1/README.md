@@ -12,8 +12,8 @@
 - Validate if JFrog CLI is installed on your designated EC2 instance by running `jf -v` validate the version.
   - If not, follow instructions from https://jfrog.com/getcli/ 
 - Validate if JFrog CLI is configured by running `jf c show` on the EC2 instance.
-      ![CLI configured](cli_configured.png)
-  -  If not, update HOSTNAME, USERNAME & PASSWORD within `./scripts/_setupCLI.sh` and run.
+      ![CLI configured](images/cli_configured.png)
+  -  If not, update HOSTNAME, USERNAME & PASSWORD within `./scripts/_setupCLI.sh` and run it.
 - Make sure set of repositories appear in your JFrog Platform.
   -  If not, please run `./scripts/rescue/create_repo_rescue.sh` to create those repositories created. 
 - Please let us know if you need help. 
@@ -128,19 +128,22 @@
 ### CREATE A OPERATIONAL RISK POLICY using UI
 - Click on **New Policy**. Let's create a **Operational Risk** policy with **"prod-operational-risk-policy"** name.
  
-  ![Operational Risk Policy]()
+  ![Operational Risk Policy](images/Op_Risk_create_policy.gif)
 
 <br/>
 
 - Click on **New Rule** to add rule to **prod-operational-risk-policy**. Add a Rule for banned licenses with **Criteria** and **Automatic Actions** below. Click **Save** and Click **Create**.
   * **Rule name**: high
-  * **Criteria**: Minimum Severity: High
+  * **Criteria**: 
+      * Custom Condition: 
+          * Check Is End-of-Life?
+          * Risk Severity: High
   * **Automatic Actions**:
     * Notify Deployer
     * Block Download
     * Fail Build
   
-  ![Operational Risk Rules]()
+  ![Operational Risk Rules](images/Op_Risk_create_rule.gif)
   
 **NOTE:** You may have noticed that Fields under **Criteria** are different for **Operational Risk Policy** from the other 2 types.  
 

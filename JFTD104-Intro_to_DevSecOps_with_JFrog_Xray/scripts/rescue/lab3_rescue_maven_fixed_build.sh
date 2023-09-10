@@ -18,9 +18,6 @@ cd ../../lab-3/project-examples/maven-fixed-example
 
 rm -r target
 
-echo "Jfrog is accessible check : "
-jf rt ping
-
 #Config Maven
 
 jf mvnc --repo-resolve-snapshots jftd104-libs-snapshot-virtual --repo-resolve-releases jftd104-libs-release-virtual --repo-deploy-snapshots jftd104-libs-snapshot-virtual --repo-deploy-releases jftd104-libs-release-virtual

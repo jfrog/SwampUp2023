@@ -10,9 +10,8 @@
 <br/>
 
 ## Xray at CI/CD
-- One of the Package Manager Integration we can use
-
-#### MAVEN
+<details>
+  <summary>MAVEN</summary>
 
 ### Package Manager Integration
 JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
@@ -75,6 +74,7 @@ JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 
   ![New Watch](images/3-2.gif)
 
+
 ### RESCAN BUILD AFTER UPDATE VERSION OF VULNERABLE DEPENDENCIES 
 
 - Follow the same sequence of steps as above to run a successful build this time.
@@ -89,7 +89,10 @@ JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 | -------- |
 
 
-#### NPM
+</details>
+
+<details>
+  <summary>NPM</summary>
 
 ### Package Manager Integration
 - `cd JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/npm-vulnerable-example`
@@ -151,3 +154,4 @@ JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 
 | No license compliance violations were found |
 | -------- |
+</details>
