@@ -1,4 +1,4 @@
-## Adv scan lab
+## JFrog Advanced Scan lab
 - Pre-requisites:
   - Pls make sure Docker Desktop is running on your local machine
 
