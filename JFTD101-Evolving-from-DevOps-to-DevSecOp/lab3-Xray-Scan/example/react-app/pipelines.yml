@@ -1,0 +1,102 @@
+resources:
+  - name: git_react_repo
+    type: GitRepo
+    configuration:
+      # SCM integration where the repository is located
+      gitProvider: GITHUB_MPATEL
+      # Repository path, including org name/repo name
+      path: MaharshiPatel/react-app                     # Update with your "git_user"/SwampUp2021
+      buildOn:
+        pullRequestCreate: true
+        commit: true
+      branches:
+        # Specifies which branches will trigger dependent steps
+        include: main
+
+  - name: react_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: Artifactory_MPATEL
+      buildName:  'react-app'
+      buildNumber: $run_number
+      externalCI: Artifactory
+
+  - name: promoted_react_to_qa_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: Artifactory_MPATEL
+      buildName:  'react-app'
+      buildNumber: $run_number
+      externalCI: Artifactory
+
+  - name: promoted_react_to_prod_build_info
+    type: BuildInfo
+    configuration:
+      sourceArtifactory: Artifactory_MPATEL
+      buildName:  'react-app'
+      buildNumber: $run_number
+      externalCI: Artifactory
+
+pipelines:
+  - name: react_app_dev
+    configuration:
+      environmentVariables:
+        readOnly:
+          my_env_var: '1.0.$run_number'
+    steps:
+      - name: npm_build_step
+        type: NpmBuild
+        configuration:
+          repositoryName: dashboard-npm-virtual                                      # required, npm repository name on artifacctory
+          sourceLocation: ./client/      # required, location of package.json file
+          integrations:
+            - name:  Artifactory_MPATEL  # required
+          inputResources:
+            - name: git_react_repo   # required
+        execution:
+          onSuccess:
+            - cd $res_src_resourcePath
+
+      - name: npm_publish_step
+        type: NpmPublish
+        configuration:
+          repositoryName: dashboard-npm-virtual        # required, npm repository name on artifactory
+          autoPublishBuildInfo: true       # optional
+          forceXrayScan: true              # optional
+          failOnScan: false                 # default true
+          integrations:
+            - name: Artifactory_MPATEL            # required
+          inputSteps:
+            - name: npm_build_step         # required
+          outputResources:
+            - name: react_build_info         # optional
+
+  - name: react_app_qa
+    steps:
+      - name: promote_to_qa
+        type: PromoteBuild
+        configuration:
+          targetRepository: dashboard-npm-qa-local
+          includeDependencies: false    # default false
+          status: 'QA'
+          comment: 'Promote to QA'
+          copy: false
+          inputResources:
+            - name: react_build_info
+          outputResources:
+            - name: promoted_react_to_qa_build_info
+
+  - name: react_app_prod
+    steps:
+      - name: promote_to_prod
+        type: PromoteBuild
+        configuration:
+          targetRepository: dashboard-npm-prod-local
+          includeDependencies: false    # default false
+          status: 'PROD'
+          comment: 'Promote to PROD'
+          copy: false
+          inputResources:
+            - name: promoted_react_to_qa_build_info
+          outputResources:
+            - name: promoted_react_to_prod_build_info
