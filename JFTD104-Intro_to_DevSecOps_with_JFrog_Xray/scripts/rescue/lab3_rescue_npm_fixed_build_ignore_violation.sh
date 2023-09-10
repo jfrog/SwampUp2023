@@ -13,7 +13,10 @@ export CLI_INSTANCE_ID=swampup2023
 
 jf config use $CLI_INSTANCE_ID
 
-cd ../lab-3/project-examples/npm-fixed-example
+#Creating Ignore Violation
+jf xr curl -XPOST /api/v1/ignore_rules -H 'Content-Type: application/json' -d @../json/npm-ignore_violation.json
+
+cd ../../lab-3/project-examples/npm-fixed-example
 
 rm -r node_modules
 rm package-lock.json

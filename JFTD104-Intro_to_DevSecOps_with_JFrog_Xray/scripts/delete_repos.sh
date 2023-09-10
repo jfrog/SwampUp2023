@@ -1,4 +1,4 @@
-for row in $(cat ./delete-repos.json | jq -r '.[] | @base64'); do
+for row in $(cat ./json/delete-repos.json | jq -r '.[] | @base64'); do
     _jq() {
       echo ${row} | base64 --decode | jq -r ${1}
     }
