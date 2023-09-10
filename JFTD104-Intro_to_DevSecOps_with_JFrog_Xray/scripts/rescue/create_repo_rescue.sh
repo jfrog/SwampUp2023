@@ -1,8 +1,8 @@
 jf c use swampup2023
 
-sh create_local_repos.sh
-sh create_remote_repos.sh
-sh create_virtual_repos.sh
+sh ../create_local_repos.sh
+sh ../create_remote_repos.sh
+sh ../create_virtual_repos.sh
 
 
 RANDOM=$$

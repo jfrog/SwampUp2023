@@ -1,3 +1,3 @@
 jf c use swampup2023
 
-sh delete_repos.sh
+sh ../delete_repos.sh

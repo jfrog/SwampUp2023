@@ -10,11 +10,16 @@
 # init process #
 #################
 
+#echo "Configuration name for CLI (unique name) : "
+#read -r CLIConfigName
+
 export CLI_INSTANCE_ID=swampup2023
 
 jf config use $CLI_INSTANCE_ID
 
-cd ../lab-3/project-examples/maven-fixed-example
+cd ../../lab-3/project-examples/maven-vulnerable-example
+
+rm -r target
 
 echo "Jfrog is accessible check : "
 jf rt ping
@@ -36,7 +41,7 @@ jf rt bce swampup23_jftd104_mvn_pipeline $BUILD_NUMBER
 
 #Collect GIT Variables
 
-#jf rt bag swampup23_jftd104_mvn_pipeline $BUILD_NUMBER ../../.
+jf rt bag swampup23_jftd104_mvn_pipeline $BUILD_NUMBER
 
 #Publish Build Info
 
