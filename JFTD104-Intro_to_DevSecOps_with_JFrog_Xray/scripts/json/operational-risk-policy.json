@@ -14,7 +14,7 @@
           "active": false,
           "unscanned": false
         },
-        "fail_build": false
+        "fail_build": true
       },
       "priority": 1
     }

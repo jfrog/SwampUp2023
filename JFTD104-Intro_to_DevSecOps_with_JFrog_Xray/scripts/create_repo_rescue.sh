@@ -1,9 +1,13 @@
+#!/usr/bin/env sh
+
 jf c use swampup2023
 
-sh ../create_local_repos.sh
-sh ../create_remote_repos.sh
-sh ../create_virtual_repos.sh
+# setting PWD
+cd ..
 
+sh create_local_repos.sh
+sh create_remote_repos.sh
+sh create_virtual_repos.sh
 
 RANDOM=$$
 export BUILD_NUMBER=${RANDOM}
