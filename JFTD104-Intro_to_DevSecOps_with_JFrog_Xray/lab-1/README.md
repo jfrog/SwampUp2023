@@ -134,7 +134,10 @@
 
 - Click on **New Rule** to add rule to **prod-operational-risk-policy**. Add a Rule for banned licenses with **Criteria** and **Automatic Actions** below. Click **Save** and Click **Create**.
   * **Rule name**: high
-  * **Criteria**: Minimum Severity: High
+  * **Criteria**: 
+      * Custom Condition: 
+          * Check Is End-of-Life?
+          * Risk Severity: High
   * **Automatic Actions**:
     * Notify Deployer
     * Block Download

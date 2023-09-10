@@ -4,10 +4,14 @@
   "type": "operational_risk",
   "rules": [
     {
-      "name": "op_risk_minimal_risk_rule",
-      "criteria": {
-        "op_risk_min_risk": "High"
-      },
+      "name": "op_risk_custom_rule",
+      "criteria":{
+            "op_risk_custom":{
+               "use_and_condition":false,
+               "risk":"high",
+               "is_eol":true
+            }
+         },
       "actions": {
         "webhooks": [],
         "block_download": {
