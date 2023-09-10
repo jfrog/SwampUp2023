@@ -1,13 +1,14 @@
 ## IDE plugin scan:
   * Pre-requisites:
      * VS Code IDE
-  * Open npm-example project in the folder example on VS Code
-  * Install Xray extention on VS Code
+  * Open npm-vulnerable-example project in the folder example on VS Code
+  * Install The Jfrog extension in VS Code  as mentioned in [JFrog - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=JFrog.jfrog-vscode-extension)
     * Navigate to Extension tab and look up JFrog > Click Install
-    * Configure Xray extension of VS Code - provide the instance url and credentials
+    * Configure Jfrog extension of VS Code - provide the instance url and credentials
     * Once all set, navigate to the JFrog extension and run the scan
     * Check and validate the results
-
+      
+    <img src="npm-example_xray_scan_results.png" alt="npm-vulnerable-example xray scan results" width="600" height="300">
 <br/>
 
 ## CLI dependency scan:
@@ -18,8 +19,9 @@
 
 * On the terminal:
   * Go to the root of the npm project
-  * Run jf audit
+  * Run `jf audit`
   * Validate the scan results
+    <img src="jf_audit.jpg" alt="jf audit" width="600" height="300">
 
 ## Docker Desktop extension scan
   * Pre-requisites:
@@ -29,10 +31,13 @@
 
 <br/>
 
-  * Install JFrog extension
+  * On Docker Desktop , [install JFrog extension](https://hub.docker.com/extensions/jfrog/jfrog-docker-desktop-extension)
   * Configure the extension with JFrog instance by providing instance url and credentials
+  <img src="Docker_desktop_config_jfrog_ext.png" alt="config Docker desktop" width="600" height="300">
   * Choose an image and click scan
+    <img src="choose_image_to_scan.png" alt="choose image to scan" width="600" height="300">
   * Validate results
+    <img src="DD_image_scan_results.png" alt="DD image scan results" width="600" height="300">
 
 <br/>
 
