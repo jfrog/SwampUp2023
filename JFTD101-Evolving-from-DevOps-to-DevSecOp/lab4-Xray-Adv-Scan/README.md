@@ -72,16 +72,16 @@
 
 <br/>
 
-- Other images that can be pulled from dockerhub that show interestinf results:
-  - mvila/npm-addict:production - this has a malicious package
-  - nginxdemos/hello:latest - this has a services exposure
+- Other images that can be pulled from dockerhub that show interesting results:
+  - `mvila/npm-addict:production` - this has a malicious package
+  - `nginxdemos/hello:latest` - this has a services exposure
 
 <br/>
 
 - ---Optional step---
 - Select option #4 - `Push Docker image from local machine to scan with JAS`
   - Select a docker images from the list of available images on your local machine and push it
-  - Notice how the image gets pushed to Artifactory and then the scans are also done. This may take a few mins...
+  - Notice how the image gets pushed to Artifactory and then the scans are also done. This may take a few minutes ...
   - Once done, a new browser tab opens up that takes you to the scan results
 
 
