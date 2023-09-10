@@ -120,10 +120,15 @@
 
 ## RUN SCRIPT - Prerequisites for future labs that CREATES ALL REPOSITORIES [MUST]
 - Run `sh lab_1_rescue.sh` and it will create all local, remote, virtual repositories.
+  - NOTE: Please make sure, 
+    - Main instance JFrog CLI server ID  is `swampup` [case sensitive]
+    - Edge instance JFrog CLI server ID  is `swampupedge` [case sensitive]
+    - if it's different then please update those IDs in lab_1_rescue.sh and lab_1_rescue_for_edge.sh
 
 <br />
 
-## CHALLENGE - Update Repository [Optional]
+## CHALLENGE - Create / Update Repository [Optional]
+- Create Federated Repository
 - Disable indexing in Xray for one repository we created above
 - Update the description for one repository we created above
 - Configure repository with Include/Exclude Pattern

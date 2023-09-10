@@ -6,4 +6,6 @@ sh create_virtual_repos.sh
 
 jf rt curl -XPUT "/api/repositories/aws-tf-local" -H "Content-Type: application/json" -d "@createTerraformRepo.json"
 
+sh create_federated_repos.sh
+
 sh lab_1_rescue_for_edge.sh

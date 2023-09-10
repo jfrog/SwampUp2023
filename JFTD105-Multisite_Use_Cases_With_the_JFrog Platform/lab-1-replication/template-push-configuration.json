@@ -1,0 +1,11 @@
+{
+  "cronExp": "* */30 * * * ?",
+  "enableEventReplication": "true",
+  "enabled": "true",
+  "repoKey": "${repo-name}",
+  "serverId": "swampupsecond",
+  "targetRepoKey": "${repo-name}",
+  "syncDeletes": "true",
+  "syncProperties": "true",
+  "syncStatistics": "true"
+}

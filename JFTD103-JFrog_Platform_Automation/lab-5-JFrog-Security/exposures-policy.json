@@ -1,0 +1,26 @@
+{
+  "name": "exposures-policy",
+  "description": "Exposures security policy",
+  "type": "security",
+  "rules": [
+    {
+      "name": "medium_plus_exposures",
+      "criteria": {
+        "exposures": {
+          "min_severity": "medium",
+          "secrets": true,
+          "applications": true,
+          "services": true,
+          "iac": true
+        }
+      },
+      "actions": {
+        "block_download": {
+          "active": false,
+          "unscanned": false
+        }
+      },
+      "priority": 1
+    }
+  ]
+}

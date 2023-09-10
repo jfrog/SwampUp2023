@@ -1,0 +1,9 @@
+[
+  {"key":"jftd105lab1-docker-prod-local","packageType":"docker","rclass":"local","repoLayoutRef":"simple-default","environments":"PROD","xrayIndex":"true"},
+  {"key":"jftd105lab1-maven-prod-local","packageType":"maven","rclass":"local","repoLayoutRef":"maven-2-default","environments":"PROD","xrayIndex":"true"},
+  {"key":"jftd105lab1-npm-prod-local","packageType":"npm","rclass":"local","repoLayoutRef":"npm-default","environments":"PROD","xrayIndex":"true"},
+  {"key":"jftd105lab1-docker-dev-local","packageType":"docker","rclass":"local","repoLayoutRef":"simple-default","environments":"DEV","xrayIndex":"true"},
+  {"key":"jftd105lab1-maven-dev-local","packageType":"maven","rclass":"local","repoLayoutRef":"maven-2-default","environments":"DEV","xrayIndex":"true"},
+  {"key":"jftd105lab1-npm-dev-local","packageType":"npm","rclass":"local","repoLayoutRef":"npm-default","environments":"DEV","xrayIndex":"true"}
+
+]

@@ -3,7 +3,7 @@ cd ./example/maven-example
 jf mvnc --server-id-resolve swampup --server-id-deploy swampup --repo-resolve-releases payment-maven-dev-virtual --repo-resolve-snapshots payment-maven-dev-virtual --repo-deploy-releases payment-maven-dev-virtual --repo-deploy-snapshots payment-maven-dev-virtual
 
 # Build Maven Project
-jf mvn clean install -f pom.xml --build-name payment-maven --build-number 2.0.0
+jf mvn clean install -f pom.xml -Dmaven.test.skip=true -Dartifactory.publish.artifacts=true --build-name payment-maven --build-number 2.0.0
 
 jf rt bce payment-maven 2.0.0
 jf rt bag payment-maven 2.0.0
@@ -16,10 +16,10 @@ jf npmc --server-id-resolve swampup --server-id-deploy swampup --repo-resolve au
 
 # Build NPM Project
 jf npm install --build-name auth-npm --build-number 2.0.0
-jf npm publish --build-name auth-npm --build-number 2.0.0
 
 jf rt bce auth-npm 2.0.0
 jf rt bag auth-npm 2.0.0
+jf npm publish --build-name auth-npm --build-number 2.0.0
 jf rt bp auth-npm 2.0.0
 
 # Build promotion to QA for integration tests.
@@ -33,8 +33,8 @@ jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pas
 jf rt bpr payment-maven 2.0.0 payment-maven-prod-local --status='Prod candidate' --comment='webservice is now prod ready' --copy=true --props="maintainer=maharship;stage=prod"
 jf rt bpr auth-npm 2.0.0 auth-npm-prod-local --status='Prod candidate' --comment='webservice is now prod ready' --copy=true --props="maintainer=maharship;stage=prod"
 
-jf rt sp "payment-maven-qa-local/org/jfrog/test/" "unit.test=pass;integration.test=pass;"
-jf rt sp "auth-npm-dev-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=pass;"
+jf rt sp "payment-maven-prod-local/org/jfrog/test/" "unit.test=pass;integration.test=pass;release.version=2.0.0"
+jf rt sp "auth-npm-prod-local/npm-example/-/npm-example-1.1.6.tgz" "unit.test=pass;integration.test=pass;release.version=2.0.0"
 
 cd ../../
 
