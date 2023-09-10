@@ -21,7 +21,7 @@
   * Go to the root of the npm project
   * Run `jf audit`
   * Validate the scan results
-    <img src="jf_audit.jpg" alt="jf audit" width="600" height="300">
+  <br/><img src="jf_audit.jpg" alt="jf audit" width="600" height="300">
 
 ## Docker Desktop extension scan
   * Pre-requisites:
