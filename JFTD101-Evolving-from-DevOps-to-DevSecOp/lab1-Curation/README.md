@@ -45,6 +45,7 @@
       * Copy and run instructions in your terminal to config your npm client  
    Example:  Paste the generated configuration details for your  ~/.npmrc file when using unix (or if using 
         Windows the %USERPROFILE%/.npmrc)
+<br/>
         <img src="npmrc_contents.jpg" alt=".npmrc contents" width="600" height="300">
 <br/>
 
@@ -58,7 +59,8 @@ Note: The generated configuration details for your  ~/.npmrc needs a small corre
   
 Now rerun the `npm install cors.js`.
 * Check if the command fails
-  <img src="curation_403_response.jpg" alt="curation 403 repsonse" width="600" height="200">
+<br/>
+<img src="curation_403_response.jpg" alt="curation 403 repsonse" width="600" height="200">
 <br/>
 
 * Run npm install cors - an example of a non-malicious pkg
