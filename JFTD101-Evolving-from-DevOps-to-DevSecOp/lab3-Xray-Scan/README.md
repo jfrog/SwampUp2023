@@ -14,6 +14,7 @@
   - Turn on indexing of the repositories
     - Xray > Indexed resources > Add a repository > Select your `npm-local` and `npm-remote` repo in the left column 
       and bring it over to the right `Selected Repositories` column > Click `Save`
+  - 
 
 <br/>
 
@@ -53,7 +54,7 @@
         <img src="jf_rt_bp.png" alt="jf rt build-publish" width="600" height="100">
     - Verify the published build info on the instance and check the scan details in Builds > npm_build > 02 > Xray data
     - Scan the build info on your local by Xray - optional
-      - `jf bs npm_build 02 –vulns`
+      - `jf bs npm_build 02 --extended-table=true --vuln`
     - Run jf audit - optional
       - `jf audit --extended-table=true --fixable-only=true --licenses=true`
         <br/>
@@ -66,7 +67,7 @@
         <br/> Note: The 2>&1 syntax redirects the standard error stream to the standard output stream so that both 
         streams are captured in the output variable.
 ```text
-output=$(jf bs npm_build 03 --extended-table=true --fail=true 2>&1)
+output=$(jf bs npm_build 02 --extended-table=true --fail=true 2>&1)
 error_code=$?
 
 echo "Command output:"

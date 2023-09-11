@@ -18,8 +18,10 @@
 <br/>
 
 * On the terminal:
-  * Go to the root of the npm project
+  * Go to the root of the npm project i.e 
+  * `cd SwampUp2023/JFTD101-Evolving-from-DevOps-to-DevSecOp/lab2-Shift-Left/example/npm-vulnerable-example`
   * Run `jf audit`
+  * Optional : Run `jf audit --extended-table=true --fixable-only=true --licenses=true`
   * Validate the scan results
   <br/><img src="jf_audit.jpg" alt="jf audit" width="600" height="300">
 
