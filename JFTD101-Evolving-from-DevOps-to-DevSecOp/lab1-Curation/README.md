@@ -52,27 +52,26 @@
 
       * Finally your ~/.npmrc file will have content similar to the following
         <br/>
-        <img src="npmrc_file.jpg" alt=".npmrc file" width="600" height="300">
+        <img src="npmrc_file.jpg" alt=".npmrc file" width="600" height="100">
         <br/>
 
 
 * Run `npm install cors.js` - An example of a malicious pkg
   
-Note: The generated configuration details for your  ~/.npmrc needs a small correction. You  will be prompted by 
-    the above command to fix it by running `npm config fix` .
+**Note:** On Mac  if you are  prompted by   the above command to fix it by running `npm config fix` , then run that .
 <br/><img src="npm_config_fix.jpg" alt="npm config fix" width="600" height="200">
 <br/>
-After you run `npm config fix`  the `_auth` in the ~/.npmrc is     prefixed by the fully qualified `npm-remote-curation` repo path as shown below:
+After you run `npm config fix`  the `_auth` in the ~/.npmrc is  prefixed by the fully qualified `npm-remote-curation` repo path as shown below:
 
 <br/><img src="npmrc_auth_prefix_fixed.jpg" alt=".npmrc _auth prefix fixed" width="600" height="100">
   
-Now rerun the `npm install cors.js`.
+Then when you  rerun the `npm install cors.js`.
 * Check if the command fails
 <br/>
 <img src="curation_403_response.jpg" alt="curation 403 repsonse" width="600" height="200">
 <br/>
 
-* Run npm install cors - an example of a non-malicious pkg
+* Run `npm install cors` - an example of a non-malicious pkg
   * Check for success
 
 
