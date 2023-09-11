@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-jf c use swampup2023
-
 # setting PWD
 cd ..
 

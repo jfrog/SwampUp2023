@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-jf c use swampup2023
-
 # Create all the repositories
 sh ../create_repo_rescue.sh
 
