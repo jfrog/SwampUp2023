@@ -3,7 +3,7 @@
      * VS Code IDE
   * Open npm-vulnerable-example project in the folder example on VS Code
   * Install The Jfrog extension in VS Code  as mentioned in [JFrog - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=JFrog.jfrog-vscode-extension)
-    * Navigate to Extension tab and look up JFrog > Click Install
+    * Navigate to Extension tab and look up `JFrog` > Click `Install`
     * Configure Jfrog extension of VS Code - provide the instance url and credentials
     * Once all set, navigate to the JFrog extension and run the scan
     * Check and validate the results
@@ -25,9 +25,9 @@
 
 ## Docker Desktop extension scan
   * Pre-requisites:
-    * Docker Desktop
+    * [Docker Desktop](https://www.docker.com/products/docker-desktop/)
     * Docker image that is present locally
-      * If none, run docker pull nginx:latest
+      * If none, run `docker pull nginx:latest`
 
 <br/>
 
@@ -49,23 +49,23 @@
 - Let’s do some initial configuration:
   - Navigate to Settings > Environment and create a new environment called frogbot
   - Navigate to Settings > Secrets and Variables > Actions and create the following 2 secrets:
-    - JF_URL - provide your instance url
-    - JF_ACCESS_TOKEN - provide an access token from your instance
-  - Navigate to Settings > Actions > General and scroll to the bottom of the page
-    - Make sure the checkbox Allow github to create and approve pull requests is selected
+    - `JF_URL` - provide your instance url
+    - `JF_ACCESS_TOKEN` - provide an access token from your instance
+  - Navigate to `Settings > Actions > General` and scroll to the bottom of the page
+    - Make sure the checkbox `Allow github to create and approve pull requests` is selected
 
 <br/>
 
 - Let’s create a PR with a change in dependency:
-  - Navigate to Code and open requirements.txt file in the project root
+  - Navigate to Code and open `requirements.txt` file in the project root
   - Click Edit on top right and change the version of the dependency PyYaml to 5.2
   - Click commit changes and select the 2nd option in the list ‘Create a new branch for this commit and start a pull request’
-  - Provide an appropriate branch name like ‘vuln-branch’ and click on Propose changes
-  - Then click on Create Pull request
-  - Wait a few seconds for some tasks/checks to be triggered until you get the message - “Frogbot Scan Pull Request / scan-pull-request (pull_request_target) Waiting”
-  - Click on Details next to the message
-  - Then click on Review pending deployments
-  - Select the checkbox next to frogbot and click on Approve and deploy
+  - Provide an appropriate branch name like `vuln-branch` and click on Propose changes
+  - Then click on `Create Pull request`
+  - Wait a few seconds for some tasks/checks to be triggered until you get the message - `“Frogbot Scan Pull Request / scan-pull-request (pull_request_target) Waiting”`
+  - Click on `Details` next to the message
+  - Then click on `Review pending deployments`
+  - Select the checkbox next to `frogbot` and click on Approve and deploy
   - The action workflow is triggered. Wait until the workflow is done
   - Once the workflow is completed, navigate to Pull requests and select the PR that was just created
   - Find and examine the scan result highlighting the vulnerability impacting PyYaml v5.2 
