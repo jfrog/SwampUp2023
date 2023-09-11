@@ -43,16 +43,18 @@
       * Navigate to Applications panel > Artifactory > Artifacts
       * Find the `npm-remote-curation` repo you just created in the list
       * Click on it and then click on the `Set Me Up` button at the top right
-      * In the Configure tab, click `Dismiss` to find the config instructions
-    or
-      * Enter your credentials and click on `"Generate Token & Create Instructions"`
+      * In the Configure tab `Enter your credentials` and click on `"Generate Token & Create Instructions"`
         <img src="npm_setMeUp_with_token.jpg" alt="npm Set Me Up with token" width="600" height="300">
-      * Copy and run instructions in your terminal to config your npm client  
-   Example:  Paste the generated configuration details for your  ~/.npmrc file when using unix (or if using 
-        Windows the %USERPROFILE%/.npmrc)
-<br/>
-        <img src="npmrc_contents.jpg" alt=".npmrc contents" width="600" height="300">
-<br/>
+      * Copy the command in the instructions to set the default npm registry with an Artifactory npm repository and 
+        run  in your terminal to config your npm client . Then paste the `basic authentication` information into 
+        your ~/.npmrc file when using unix (or if using Windows the %USERPROFILE%/.npmrc)
+<br/><img src="set_me_up_instructions.jpg" alt="Set Me Up instructions" width="600" height="300"><br/>
+
+      * Finally your ~/.npmrc file will have content similar to the following
+        <br/>
+        <img src="npmrc_file.jpg" alt=".npmrc file" width="600" height="300">
+        <br/>
+
 
 * Run `npm install cors.js` - An example of a malicious pkg
   
