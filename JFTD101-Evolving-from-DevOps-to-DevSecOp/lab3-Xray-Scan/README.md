@@ -1,7 +1,8 @@
 ## Xray Scan Lab
 - Pre-requisites:
-  - Get to the `root` of the npm project in the folder `'example'` i.e `react-app`
-  - CLI installed and configured with the JFrog instance
+  - Navigate to the root of the npm project located in the [example](example) folder, specifically at 
+    `SwampUp2023/JFTD101-Evolving-from-DevOps-to-DevSecOp/lab3-Xray-Scan/example/react-app`.
+  - JFrog CLI installed and configured with the JFrog instance
 
 <br/>
 
