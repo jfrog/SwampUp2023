@@ -1,45 +1,46 @@
 ## Xray Scan Lab
 - Pre-requisites:
   - Navigate to the root of the npm project located in the [example](example) folder, specifically at 
-    `SwampUp2023/JFTD101-Evolving-from-DevOps-to-DevSecOp/lab3-Xray-Scan/example/react-app`.
+    `SwampUp2023/JFTD101-Evolving-from-DevOps-to-DevSecOp/lab3-Xray-Scan/example/react-app/client`.
   - JFrog CLI installed and configured with the JFrog instance
 
 <br/>
 
 - On the UI:
-  - Navigate to Admin tab > Repositories > Add repositories
-  - Create a npm local repository -- `npm-local`
-  - Create a npm remote repository -- `npm-remote` proxying npm registry
-  - Create a npm virtual repository -- `npm-virtual`, include the above npm local and remote repos to be part of this virtual and then select the local repo to be the ‘default deployment repository’
+  - Navigate to Admin tab > Repositories > `Create a Repository`"
+  - Create a `npm` local repository -- `npm-local`
+  - Create a `npm` remote repository -- `npm-remote` proxying npm registry
+  - Create a `npm` virtual repository -- `npm-virtual`, include the above npm `local` and `remote` repos to be part of this `virtual` and then select the `local` repo to be the `‘default deployment repository’`
   - Turn on indexing of the repositories
-    - Xray > Indexed resources > Add a repository > Select your repo in the left column and bring it over to the right column > Save
+    - Xray > Indexed resources > Add a repository > Select your `npm-local` and `npm-remote` repo in the left column 
+      and bring it over to the right `Selected Repositories` column > Click `Save`
 
 <br/>
 
-- On your local: 
-  - get to the `root` of the `react-app` npm project under `'example'`
-    - cd `react-app`
+- On your client machine: 
+  - Go to the `root` directory of the npm project named `react-app` within the `'example'` folder
+    - Use the  `cd SwampUp2023/JFTD101-Evolving-from-DevOps-to-DevSecOp/lab3-Xray-Scan/example/react-app/client` command to navigate there.
   - Lets publish a dummy build to the instance
     - `jf rt bp npm_build 01`
   - Verify the build info publish on the instance
-    - Artifactory > Builds. Verify the just published build info
+    - Artifactory > Builds. Verify the build info you published in previous step.
   - Turn on indexing of the build
-    - Xray > Indexed resources > Builds > Add a build > Select your build in the left column and bring it over to the right column > Save
+    - Xray > Indexed resources > Builds > Manage Builds > Select your build in the left column and bring it over to  the  right `Selected Build` column > Save
   - From the root of the project
     - Npm package manager integration
       - Run `jf npmc`
-      - Resolve dependencies from Artifactory? (y/n)? Y
+      - Resolve dependencies from Artifactory? (y/n)? y
       - Set Artifactory server ID [swampup]: hit Return
       - Set repository for dependencies resolution (press Tab for options): use Tab to select the virtual repository 
         `npm-virtual` and hit Return
-      - Deploy project artifacts to Artifactory? (y/n)? Y
+      - Deploy project artifacts to Artifactory? (y/n)? y
       - Set Artifactory server ID [swampup] hit Return
       - Set repository for artifacts deployment (press Tab for options): use Tab to select the virtual repository 
         `npm-virtual` and hit Return
     - Npm install and build
-      - `jf npm install –build-name npm_build –build-number 02`
+      - `jf npm install --build-name npm_build --build-number 02`
     - Publish the built npm pkg to Artifactory
-      - `jf npm publish –build-name npm_build –build-number 02`
+      - `jf npm publish --build-name npm_build --build-number 02`
     - Collect environment variables
       - `jf rt bce npm_build 02`
     - Collect information regarding git
