@@ -12,8 +12,8 @@
 
   * Let’s turn on Curation:
     * Navigate to Admin panel > Curation > General and turn on Curation
-    <br/><img src="admin_curation.jpg" alt="admin->curation" width="400" height="300">
-    <br/><img src="curation_on.jpg" alt="turn on Curation" width="400" height="300">
+    <br/><img src="admin_curation.jpg" alt="admin->curation" width="600" height="300">
+    <br/><img src="curation_on.jpg" alt="turn on Curation" width="600" height="300">
       <br/>
     * Navigate to Admin panel > Curation > Curated repositories and turn on the State option on the just created 
       'npm-remote-curation' repository
@@ -32,7 +32,7 @@
       * Leave the waivers section blank then click `Next`
       * In the Actions section, pick `‘Block’` then click `Next`
       * Click on the `Save Policy` button
-      <br/><img src="curation_policy_save.jpg" alt="curation policy save" width="400" height="300">
+      <br/><img src="curation_policy_save.jpg" alt="curation policy save" width="600" height="300">
     <br/><img src="block_malicious_pkgs.jpg" alt="block malicious pkgs" width="600" height="300">
     <br/>
       
