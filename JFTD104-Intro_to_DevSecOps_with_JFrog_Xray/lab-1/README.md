@@ -15,7 +15,7 @@
       ![CLI configured](images/cli_configured.png)
   -  If not, update HOSTNAME, USERNAME & PASSWORD within `./scripts/_setupCLI.sh` and run it.
 - Make sure set of repositories appear in your JFrog Platform.
-  -  If not, please run `./scripts/rescue/create_repo_rescue.sh` to create those repositories created. 
+  -  If not, please run `./scripts/create_repo_rescue.sh` to create those repositories created. 
 - Please let us know if you need help. 
 
 <br/>

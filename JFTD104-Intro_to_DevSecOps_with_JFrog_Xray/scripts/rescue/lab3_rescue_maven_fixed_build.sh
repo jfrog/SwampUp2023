@@ -10,10 +10,6 @@
 # init process #
 #################
 
-export CLI_INSTANCE_ID=swampup2023
-
-jf config use $CLI_INSTANCE_ID
-
 cd ../../lab-3/project-examples/maven-fixed-example
 
 rm -r target

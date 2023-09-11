@@ -10,13 +10,6 @@
 # init process #
 #################
 
-#echo "Configuration name for CLI (unique name) : "
-#read -r CLIConfigName
-
-export CLI_INSTANCE_ID=swampup2023
-
-jf config use $CLI_INSTANCE_ID
-
 cd ../../lab-3/project-examples/maven-vulnerable-example
 
 rm -r target
