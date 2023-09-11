@@ -41,7 +41,7 @@
 ### In the terminal
   * Let’s configure the npm client:
       * Navigate to Applications panel > Artifactory > Artifacts
-      * Find the {npm-remote-curation} repo you just created in the list
+      * Find the `npm-remote-curation` repo you just created in the list
       * Click on it and then click on the `Set Me Up` button at the top right
       * In the Configure tab, click `Dismiss` to find the config instructions
     or
@@ -57,10 +57,12 @@
 * Run `npm install cors.js` - An example of a malicious pkg
   
 Note: The generated configuration details for your  ~/.npmrc needs a small correction. You  will be prompted by 
-    the above command to fix it by running `npm config fix` . After you run `npm config fix`  the `_auth` in the ~/.npmrc is 
-    prefixed by the fully qualified `npm-remote-curation` repo path as shown below:
-    <img src="npm_config_fix.jpg" alt="npm config fix" width="600" height="200">
-    <img src="npmrc_auth_prefix_fixed.jpg" alt=".npmrc _auth prefix fixed" width="600" height="100">
+    the above command to fix it by running `npm config fix` .
+<br/><img src="npm_config_fix.jpg" alt="npm config fix" width="600" height="200">
+<br/>
+After you run `npm config fix`  the `_auth` in the ~/.npmrc is     prefixed by the fully qualified `npm-remote-curation` repo path as shown below:
+
+<br/><img src="npmrc_auth_prefix_fixed.jpg" alt=".npmrc _auth prefix fixed" width="600" height="100">
   
 Now rerun the `npm install cors.js`.
 * Check if the command fails
