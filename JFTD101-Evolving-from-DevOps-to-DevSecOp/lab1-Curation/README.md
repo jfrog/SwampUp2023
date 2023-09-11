@@ -12,8 +12,10 @@
 
   * Let’s turn on Curation:
     * Navigate to Admin panel > Curation > General and turn on Curation
+      <br/>
+    <img src="admin_curation.jpg" alt="admin->curation" width="400" height="300">
     <img src="curation_on.jpg" alt="turn on Curation" width="400" height="300">
-
+      <br/>
     * Navigate to Admin panel > Curation > Curated repositories and turn on the State option on the just created 
       'npm-remote-curation' repository
     <img src="curated_repos.jpg" alt="curated repos" width="600" height="300">
