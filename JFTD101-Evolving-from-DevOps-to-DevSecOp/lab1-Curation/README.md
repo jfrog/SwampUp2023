@@ -24,14 +24,18 @@
 
   * Let’s create a Curation policy:
     * Navigate to Application panel > Curation > Policies management
-      * Click on Create Policy at the top right
-      * Give the Policy the name `'block malicious pkgs'`
-      * Select the just created repo by selecting Specific and then pick the repo 'npm-remote-curation' and click Save
-      * Select the first condition in the list called `‘Malicious package’`
-      * Leave the waivers section blank
-      * In the Actions section, pick `‘Block’`
-      * Click on the Save Policy button
-      <img src="block_malicious_pkgs.jpg" alt="block malicious pkgs" width="600" height="300">
+      * Click on `Create New Policy` ( if this is the first policy) or `Create Policy` at the top right
+      * Give the Policy the name `'block malicious pkgs'` and click `Next`
+      * Select the just created repo by selecting `Specific` and then pick the repo 'npm-remote-curation' 
+      and click `Save` then click `Next`
+      * Select the first condition in the list called `‘Malicious package’` then click `Next`
+      * Leave the waivers section blank then click `Next`
+      * In the Actions section, pick `‘Block’` then click `Next`
+      * Click on the `Save Policy` button
+      <br/><img src="curation_policy_save.jpg" alt="curation policy save" width="400" height="300">
+    <br/><img src="block_malicious_pkgs.jpg" alt="block malicious pkgs" width="600" height="300">
+    <br/>
+      
 <br/>
 
 ### In the terminal
