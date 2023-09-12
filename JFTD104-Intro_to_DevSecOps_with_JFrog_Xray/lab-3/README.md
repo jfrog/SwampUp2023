@@ -46,10 +46,13 @@
   
 
 │ SEVERITY │ DIRECT PACKAGE │ DIRECT PACKAGE VERSION │ IMPACTED PACKAGE NAME │ IMPACTED PACKAGE VERSION │ FIXED VERSIONS │ TYPE │ CVE │
-│ -------- │ -------------- │ ---------------------- │ --------------------- │ ------------------------ │ -------------- │ ---- │ --- │
-│ 💀Critical │ handlebars    │ 4.5.3   │ handlebars    │ 4.5.3    │ [4.7.7]   │ npm  │ CVE-2021-23369 │
-│ 💀Critical │ lodash        │ 4.17.4  │ lodash        │ 4.17.4   │ [4.17.12] │ npm  │ CVE-2019-10744 │
-│ 💀Critical │ handlebars    │ 4.5.3   │ handlebars    │ 4.5.3    │ [4.7.7]   │ npm  │ CVE-2021-23383 │
+
+│ 💀 Critical │ handlebars    │ 4.5.3   │ handlebars    │ 4.5.3    │ [4.7.7]   │ npm  │ CVE-2021-23369 │
+
+│ 💀 Critical │ lodash        │ 4.17.4  │ lodash        │ 4.17.4   │ [4.17.12] │ npm  │ CVE-2019-10744 │
+
+│ 💀 Critical │ handlebars    │ 4.5.3   │ handlebars    │ 4.5.3    │ [4.7.7]   │ npm  │ CVE-2021-23383 │
+
 
   | No license compliance violations were found |
   | ----- |
@@ -152,11 +155,12 @@ JFTD104-Intro_to_DevSecOps_with_JFrog_Xray/lab-3/project-examples/
 - Additional commands, `--vuln`, `--fail`, `--format`, [more](https://www.jfrog.com/confluence/display/CLI/CLI+for+JFrog+Xray#CLIforJFrogXray-ScanningPublishedBuilds)
 - Xray should fail the build with the following raised security violations
 
-  │ SEVERITY │ DIRECT PACKAGE │ DIRECT PACKAGE VERSION │ IMPACTED PACKAGE NAME │ IMPACTED PACKAGE VERSION │ FIXED VERSIONS │ TYPE │ CVE │
-  │ -------- │ -------------- │ ---------------------- │ --------------------- │ ------------------------ │ -------------- │ ---- │ --- │
+  │ SEVERITY │ DIRECT PACKAGE │ DIRECT PACKAGE VERSION │ IMPACTED PACKAGE NAME │ IMPACTED PACKAGE VERSION │ FIXED VERSIONS │ TYPE │ CVE |
+  
   │ 🔥High   │ org.apache.logging.log4j:log4j-core │ 2.14.1 │ org.apache.logging.log4j:log4j-core │ 2.14.1 │ [2.12.2] [2.15.0] [2.3.1] │ Maven  │ CVE-2021-44228 │
+  
   │ 🎃Medium │ org.apache.logging.log4j:log4j-core │ 2.14.1 │ org.apache.logging.log4j:log4j-core │ 2.14.1 │ [2.12.2] [2.16.0] [2.3.1] │ Maven  │ CVE-2021-45046 │
-
+  
   | No license compliance violations were found |
   | ----- |
 
