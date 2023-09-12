@@ -79,15 +79,17 @@ Note: If your instance url is https://southbay.jfrog.io the `instance_name` is `
   - Service exposures
 
 <br/>
-
+- From the menu, select option #3 - Pull Docker image or select sample docker image
 - Now select option #2 - `Pull netdata`
 - Repeat the above steps for this image's scan results too
 
 <br/>
 
-- Other images that can be pulled from dockerhub that show interesting results:
-  - `mvila/npm-addict:production` - this has a malicious package
-  - `nginxdemos/hello:latest` - this has a services exposure
+- Other images that can be pulled from dockerhub that show interesting results as follows:
+  - From the menu, select option #3 - `Pull Docker image or select sample docker image`
+  - Now select option #5 - `Pull custom image from DockerHub via Artifactory to scan with JFrog Advanced Security`
+    - `mvila/npm-addict:production` - this has a malicious package
+    - `nginxdemos/hello:latest` - this has a services exposure
 
 <br/>
 
