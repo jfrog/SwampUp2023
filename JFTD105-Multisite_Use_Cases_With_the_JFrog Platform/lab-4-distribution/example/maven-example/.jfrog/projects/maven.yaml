@@ -1,0 +1,10 @@
+version: 1
+type: maven
+resolver:
+    serverId: swampup
+    snapshotRepo: payment-maven-dev-virtual
+    releaseRepo: payment-maven-dev-virtual
+deployer:
+    serverId: swampup
+    snapshotRepo: payment-maven-dev-virtual
+    releaseRepo: payment-maven-dev-virtual
