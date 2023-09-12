@@ -15,6 +15,9 @@
     <br/> or
   * JFrog username: `{username}`
   * JFrog password or API key: `{password}`
+    <br/>
+    <img src="user-mgmt-for-token-create.jpg" alt="create user token" width="600" height="300">
+    <br/>
   * Is the Artifactory reverse proxy configured to accept a client certificate? (y/n): `n`
   * Use the configured instance - `jf config use {server ID}` Ex: `jf config use swampup`
 

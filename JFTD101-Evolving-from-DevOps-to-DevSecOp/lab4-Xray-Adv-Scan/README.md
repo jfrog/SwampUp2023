@@ -1,10 +1,21 @@
 ## JFrog Advanced Scan lab
 - Pre-requisites:
-  - Pls make sure Docker Desktop is running on your local machine
+  - Pls make sure Docker Daemon is running on your local machine
+  - Run the following cleanup script:
+```
+jf rt curl -XDELETE /api/repositories/docker-hub-remote-repo
+jf rt curl -XDELETE /api/repositories/local-docker-repo
+jf xr curl -XDELETE /api/v2/watches/Security_watch
+jf xr curl -XDELETE /api/v2/policies/Security_policy
+```
 
 <br/>
 
 ### Initial setup
+- Create a folder for this lab and navigate to it
+  - `mkdir ~/lab4`
+  - `cd ~/lab4`
+  
 - Download the script (zip file) from here  
     - https://releases.jfrog.io/artifactory/website/security/guided-trial.zip
     - Then manually unzip it
@@ -29,7 +40,9 @@
   <br/><img src="jas_select_option1.png" alt="jas option1" width="600" height="100">
 
 - Select option #2 - I already have an instance
-- Enter your instance name - {instance_name} and email address used
+- Enter your instance name - `instance_name` and `email address` used
+Note: If your instance url is https://southbay.jfrog.io the `instance_name` is `southbay`
+
   <br/><img src="jas_enter_instance_name.png" alt="jas enter jpd name" width="600" height="100">
 - Select option #2 and provide your password
   <br/><img src="jas_provide_jpd_creds.png" alt="jas provide jpd creds" width="600" height="100">
@@ -66,15 +79,17 @@
   - Service exposures
 
 <br/>
-
+- From the menu, select option #3 - Pull Docker image or select sample docker image
 - Now select option #2 - `Pull netdata`
 - Repeat the above steps for this image's scan results too
 
 <br/>
 
-- Other images that can be pulled from dockerhub that show interesting results:
-  - `mvila/npm-addict:production` - this has a malicious package
-  - `nginxdemos/hello:latest` - this has a services exposure
+- Other images that can be pulled from dockerhub that show interesting results as follows:
+  - From the menu, select option #3 - `Pull Docker image or select sample docker image`
+  - Now select option #5 - `Pull custom image from DockerHub via Artifactory to scan with JFrog Advanced Security`
+    - `mvila/npm-addict:production` - this has a malicious package
+    - `nginxdemos/hello:latest` - this has a services exposure
 
 <br/>
 
