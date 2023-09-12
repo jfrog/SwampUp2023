@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jfrog.test</groupId>
     <artifactId>multi</artifactId>
-    <version>SNAPSHOT</version>
+    <version>3.7-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Multi Modules Build</name>
 
@@ -91,7 +91,11 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <version>2.4</version>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1.2</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
