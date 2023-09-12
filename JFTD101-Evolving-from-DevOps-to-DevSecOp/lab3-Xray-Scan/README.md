@@ -7,14 +7,16 @@
 <br/>
 
 - On the UI:
-  - Navigate to Admin tab > Repositories > `Create a Repository`"
+  - Navigate to Artifactory > Repositories > `Create a Repository`"
   - Create a `npm` local repository -- `npm-local`
   - Create a `npm` remote repository -- `npm-remote` proxying npm registry
   - Create a `npm` virtual repository -- `npm-virtual`, include the above npm `local` and `remote` repos to be part of this `virtual` and then select the `local` repo to be the `‘default deployment repository’`
   - Turn on indexing of the repositories
     - Xray > Indexed resources > Add a repository > Select your `npm-local` and `npm-remote` repo in the left column 
       and bring it over to the right `Selected Repositories` column > Click `Save`
-  - 
+  
+
+
 
 <br/>
 
@@ -27,6 +29,23 @@
     - Artifactory > Builds. Verify the build info you published in previous step.
   - Turn on indexing of the build
     - Xray > Indexed resources > Builds > Manage Builds > Select your build in the left column and bring it over to  the  right `Selected Build` column > Save
+
+  - Navigate to Xray > Watches & Policies > Click on `New Policy`
+    - Create a Security Policy named `security-policy`
+    - Click on `New Rule`
+    - Add a rule named `high`
+      - In `Minimal Severity` select the option `High` from the dropdown as the criteria.
+      - Under `Automatic Actions` select the `Fail Build` option and click `Save`
+    - Click `Create` to create the Policy
+  - Navigate to Xray > Watches & Policies > `Watches` tab > Click on `New Watch`
+    - Create a Watch named `build-watch`
+    - Click on `Add Builds`
+    - Select the `npm_build` and move it over to the right `Selected Build` column 
+    - Click Save
+    - Click `Manage Policies`
+    - In `Manage Watch Policies` Select the `security-policy` you created and move it to the right `Selected Policies` column and click Save
+    - Click on `Create` to create the watch.
+    
   - From the root of the project
     - Npm package manager integration
       - Run `jf npmc`
