@@ -1,4 +1,5 @@
-# LAB 3 - Build, Properties and Replication
+# Lab-1-replication
+
 
 ## Prerequisites
 - Lab-0 - Configure JFrog CLI
