@@ -58,7 +58,7 @@
 ### INDEX BUILDS using AUTOMATION [Optional]
 - Run 
 ```
-  jf xr curl -XPUT "/api/v1/binMgr/1/builds" -H "Content-Type: application/json" -d "./json/@index-builds.json"
+  jf xr curl -XPUT "/api/v1/binMgr/1/builds" -H "Content-Type: application/json" -d "@./json/index-builds.json"
 ```
 
 <br/>
@@ -89,7 +89,7 @@
 ### CREATE A SECURITY POLICY using AUTOMATION [Optional]
 - Run
 ```
-  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "./json/@prod-sec-policy.json"
+  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "@./json/prod-sec-policy.json"
 ```
   - With Severity - CRITICAL, HIGH, MEDIUM, LOW with different action items
 - Confirm Security Policy named with ``prod-security-policy`` is created
@@ -121,7 +121,7 @@
 ### CREATE A LICENSE POLICY using AUTOMATION [Optional]
 - Run 
 ```
-  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "./json/@prod-lic-policy.json"
+  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "@./json/prod-lic-policy.json"
 ```
 - Confirm License Policy named with ``prod-license-policy`` is created
 
@@ -157,6 +157,6 @@
 ### CREATE A OPERATIONAL RISK POLICY using AUTOMATION [Optional]
 - Run 
 ```
-  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "./json/@operational-risk-policy.json"
+  jf xr curl -XPOST "/api/v2/policies" -H "Content-Type: application/json" -d "@./json/operational-risk-policy.json"
 ```
 - Confirm Operational Policy named with ``prod-operational-risk-policy`` is created
