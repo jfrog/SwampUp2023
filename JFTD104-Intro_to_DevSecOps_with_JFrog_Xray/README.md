@@ -1,37 +1,41 @@
 # Introduction to DevSecOps with JFrog Xray
 
+## Course Objective
+Securing your software supply chain is an increasingly complex problem with evolving attack methods and a mix of security point solutions, which can leave you with security blind spots and gaps across your supply chain. This training will discuss how JFrog Xray can help with DevSecOps, how it integrates with the JFrog Platform to secure builds and artifacts, and how to create different policies for different stages of the CI/CD process. We’ll show how to use Xray’s integration with IDEs and CI Servers to reduce risk, speed up development, and ensure reliability in production.
+
+## By the end of this training, you should be able to:
+Understand the impact of these components on production system quality, performance, and architectural changes
+How to use Xray’s integration with IDEs and CI Servers to reduce risk, speed up development, and ensure reliability in production
+Identify container security, why it’s different, and how to streamline security and governance for cloud-native apps
+Roll out security best practices throughout their organization
+
+## Who should attend?
+Developers
+Release Managers
+Automation Engineers
+DevOps Engineers and Software Security Personnel who want to gain a basic understanding of JFrog Xray
+
+
 ## Agenda
 - Lab 1 - Indexing Resources and Create Policy
 - LAB 2 - Create Watch and check for violation
-- LAB 3 - Shift Left Security
+- LAB 3 - Package Build Integration
 - Lab 4 - Exploring JFrog Advanced Security
 
 <br/>
 
 ## Prerequisites
-
-- Generate a Github personnal [access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token). <br/>
-  - **NOTE**: if you already have GitHub access token then skip this step else create GitHub account first and then follow above steps.
-- Confirm `git` [client](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) has been configured with your user
-  - verify with ``git config --list``
-- Fork [jfrog/SwampUp2023](https://github.com/jfrog/SwampUp2023) github repository.
-  - Reference document to [fork repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository).
-- `git clone` the forked repo on your workstation
-  - Reference document to [clone repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository).
-- All content related today's training is under "**SUP003-Intro_to_DevSecOps_with_JFrog_Xray/**".
-
-
-<br/>
-
-## .env config on the EC2 instance [Must]
-- Our directory `SwampUp2023/JFTD104-Intro_to_DevSecOps_with_JFrog_Xray` has `.env` or `env.bat` file where we need define environment variables.
-  - Mandatory - JFROG_PLATFORM, ADMIN_USER, ADMIN_PASSWORD, JFROG_EDGE
-  - Optional - ACCESS_TOKEN
-- For linux machine - `source .env` or for windows - `call env.bat`
+- A SAAS Instance of JFrog Platform. This will be provided as part of your enrollment to the Training class.
+- Validate if JFrog CLI is installed on your designated EC2 instance by running `jf -v` validate the version.
+  - If not, follow instructions from https://jfrog.com/getcli/ 
+- Validate if JFrog CLI is configured by running `jf c show` on the EC2 instance.
+      ![CLI configured](images/cli_configured.png)
+  -  If not, update HOSTNAME, USERNAME & PASSWORD within `./scripts/_setupCLI.sh` and run it.
+- A folder titled SwampUp2023 should exist with the course content
+  - run `ls -l` to validate.
+  - when instructed, if needed, run `git pull` to update the contents.
+- Make sure set of repositories appear in your JFrog Platform.
+  -  If not, please run `./scripts/create_repo_rescue.sh` to create those repositories created. 
+- Please let us know if you need help. 
 
 <br/>
-
-
-## Labs
-
-### Fill instructions based on Fabien's base image instructions.

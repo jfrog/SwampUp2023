@@ -14,6 +14,9 @@
 - Validate if JFrog CLI is configured by running `jf c show` on the EC2 instance.
       ![CLI configured](images/cli_configured.png)
   -  If not, update HOSTNAME, USERNAME & PASSWORD within `./scripts/_setupCLI.sh` and run it.
+- A folder titled SwampUp2023 should exist with the course content
+  - run `ls -l` to validate.
+  - when instructed, if needed, run `git pull` to update the contents.
 - Make sure set of repositories appear in your JFrog Platform.
   -  If not, please run `./scripts/create_repo_rescue.sh` to create those repositories created. 
 - Please let us know if you need help. 
